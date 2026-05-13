@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>运营管理与指挥｜园区智能运营平台</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="主导航">
+      <a class="brand" href="./index.html#top" aria-label="返回园区智能运营平台首页">
+        <span class="brand-mark"></span>
+        <span>园区智能运营平台</span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="./index.html#scenes">场景应用</a>
+        <a href="#dashboard">运营驾驶舱</a>
+        <a href="#emergency">应急助手</a>
+        <a href="#assurance">重点保障</a>
+      </nav>
+      <a class="nav-action" href="./index.html#scenes">返回应用层</a>
+    </header>
+
+    <main id="top">
+      <section class="module-hero command-hero" id="overview">
+        <div class="module-hero-copy">
+          <a class="back-link" href="./index.html#scenes">← 返回业务场景应用层</a>
+          <p class="eyebrow">应用模块 06</p>
+          <h1>运营管理与指挥</h1>
+          <p class="hero-lede">
+            面向园区管理层、运营中心、应急值守和重大活动保障团队，把安防、物业、服务、办公、告警、工单等数据统一汇总，形成一屏统览、预案联动、任务闭环和复盘留痕的指挥中枢。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#dashboard">园区智能运营驾驶舱</a>
+            <a class="secondary-button" href="#emergency">应急预案智能助手</a>
+            <a class="secondary-button" href="#assurance">重大活动与重点时段保障</a>
+          </div>
+        </div>
+
+        <div class="command-console" aria-label="运营管理与指挥驾驶舱预览">
+          <div class="console-header">
+            <span>园区运营驾驶舱</span>
+            <strong>综合态势：平稳</strong>
+          </div>
+          <div class="command-console-grid">
+            <div class="command-map-panel">
+              <span class="command-sector sector-security">安防</span>
+              <span class="command-sector sector-property">物业</span>
+              <span class="command-sector sector-service">服务</span>
+              <span class="command-sector sector-office">办公</span>
+              <span class="command-alert alert-main">告警 18</span>
+              <span class="command-alert alert-task">工单 46</span>
+            </div>
+            <div class="console-side">
+              <div>
+                <strong>18</strong>
+                <span>今日告警数量</span>
+              </div>
+              <div>
+                <strong>96.8%</strong>
+                <span>设备在线率</span>
+              </div>
+              <div>
+                <strong>94%</strong>
+                <span>工单及时率</span>
+              </div>
+            </div>
+          </div>
+          <div class="console-events">
+            <p><b>08:40</b> 领导接待保障任务已推送至安保、物业、会务责任人。</p>
+            <p><b>10:12</b> B 区消防告警触发预案，系统生成处置流程并通知消控室。</p>
+            <p><b>11:30</b> 今日服务满意度 96%，停车位使用率 78%，无超时高危事件。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section module-section" id="dashboard">
+        <div class="section-heading">
+          <p class="eyebrow">园区智能运营驾驶舱</p>
+          <h2>把安防、物业、服务、办公、告警、工单等数据统一汇总，形成一屏统览</h2>
+          <p>把安防、物业、服务、办公、告警和工单数据叠加到园区空间模型上，管理层可以从楼栋、出入口、地库、机房等位置直接进入事件、设备和处置状态。</p>
+        </div>
+
+        <div class="dashboard-showcase">
+          <div class="digital-twin-board" aria-label="园区数字孪生态势界面">
+            <div class="twin-toolbar">
+              <div>
+                <span>园区数字孪生</span>
+                <strong>综合态势：重点关注 5 处</strong>
+              </div>
+              <b>实时刷新</b>
+            </div>
+            <div class="twin-stage">
+              <div class="twin-map" aria-hidden="true">
+                <img src="./assets/command/campus-digital-twin.png" alt="" />
+                <span class="twin-zone zone-a">A 座办公区</span>
+                <span class="twin-zone zone-b">B 座研发楼</span>
+                <span class="twin-zone zone-service">服务中心</span>
+                <span class="twin-zone zone-garage">地下车库</span>
+                <span class="twin-zone zone-gate">南门岗亭</span>
+                <span class="twin-device device-warn device-3">烟感告警</span>
+                <span class="twin-device device-error device-4">摄像机离线</span>
+                <span class="twin-device device-warn device-5">消防占用</span>
+                <span class="twin-device device-error device-6">空调故障</span>
+                <span class="twin-device device-ok device-2">门禁正常</span>
+              </div>
+
+              <aside class="twin-event-panel" aria-label="当前告警与设备异常列表">
+                <div class="event-panel-title">
+                  <span>当前事件</span>
+                  <strong>5</strong>
+                </div>
+                <article class="event-critical">
+                  <b>B 座二层</b>
+                  <span>烟感告警，已调用火警初期处置预案</span>
+                </article>
+                <article class="event-error">
+                  <b>地下车库西区</b>
+                  <span>摄像机离线 12 分钟，已生成弱电工单</span>
+                </article>
+                <article class="event-warn">
+                  <b>A 座南侧</b>
+                  <span>空调主机高温，工程组 15 分钟内到场</span>
+                </article>
+                <article>
+                  <b>南门岗亭</b>
+                  <span>访客核验异常，安保正在复核</span>
+                </article>
+              </aside>
+            </div>
+
+            <div class="twin-legend" aria-label="图例">
+              <span><i class="legend-critical"></i>高优先级告警</span>
+              <span><i class="legend-error"></i>设备故障</span>
+              <span><i class="legend-warn"></i>待处置事件</span>
+              <span><i class="legend-ok"></i>在线设备</span>
+            </div>
+          </div>
+
+          <aside class="dashboard-side">
+            <div class="dashboard-kpis">
+              <article>
+                <span>今日告警</span>
+                <strong>18</strong>
+                <small>未处理 6 件</small>
+              </article>
+              <article>
+                <span>设备在线率</span>
+                <strong>96.8%</strong>
+                <small>离线设备 23 台</small>
+              </article>
+              <article>
+                <span>工单及时率</span>
+                <strong>94%</strong>
+                <small>SLA 超时 3 单</small>
+              </article>
+              <article>
+                <span>车位使用</span>
+                <strong>78%</strong>
+                <small>剩余车位 196 个</small>
+              </article>
+            </div>
+
+            <div class="dashboard-analysis" aria-label="运营数据汇总可视化">
+              <div class="analysis-top">
+                <div>
+                  <span>数据汇总</span>
+                  <strong>事件、设备、服务一屏统览</strong>
+                </div>
+                <b>今日</b>
+              </div>
+              <div class="summary-rings">
+                <div class="summary-ring ring-blue"><strong>42</strong><span>已处理</span></div>
+                <div class="summary-ring ring-teal"><strong>286</strong><span>访客</span></div>
+                <div class="summary-ring ring-amber"><strong>96%</strong><span>满意度</span></div>
+              </div>
+              <div class="bar-rank">
+                <label><span>门禁异常</span><i style="--w: 82%"></i><b>31%</b></label>
+                <label><span>环境保洁</span><i style="--w: 68%"></i><b>24%</b></label>
+                <label><span>停车占道</span><i style="--w: 54%"></i><b>18%</b></label>
+                <label><span>设备离线</span><i style="--w: 42%"></i><b>13%</b></label>
+              </div>
+              <div class="status-funnel" aria-label="今日事件处置状态汇总">
+                <div class="funnel-title">
+                  <span>今日事件闭环</span>
+                  <strong>48 件</strong>
+                </div>
+                <label><span>已处理</span><i style="--w: 88%"></i><b>42</b></label>
+                <label><span>处理中</span><i style="--w: 38%"></i><b>4</b></label>
+                <label><span>待派单</span><i style="--w: 22%"></i><b>2</b></label>
+                <label class="overdue"><span>超时</span><i style="--w: 12%"></i><b>3</b></label>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section workflow-section" id="emergency">
+        <div class="section-heading">
+          <p class="eyebrow">园区应急预案智能助手</p>
+          <h2>结合知识库与视频告警，突发事件自动调用预案并形成处置闭环</h2>
+          <p>面向火警、打架、聚集、突发事件等场景，系统根据告警类型、区域、时段和人员角色推荐处置流程，通知责任人，并保留指挥调度记录。</p>
+        </div>
+
+        <div class="emergency-layout">
+          <div class="emergency-assistant">
+            <div class="assistant-card">
+              <span>事件识别</span>
+              <h3>B 区二层烟感告警</h3>
+              <p>已匹配《火警初期处置预案》，建议启动现场确认、广播提醒、消防通道清空和消控联动。</p>
+            </div>
+            <div class="assistant-actions">
+              <button type="button">生成处置流程</button>
+              <button type="button">通知责任人</button>
+              <button type="button">生成复盘报告</button>
+            </div>
+          </div>
+
+          <div class="emergency-steps">
+            <article>
+              <span>01</span>
+              <h3>预案调用</h3>
+              <p>按火警、打架、聚集、设备故障、极端天气等事件类型自动匹配处置预案。</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>流程生成</h3>
+              <p>一键生成处置步骤、现场确认要点、协同部门、时限要求和升级条件。</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>责任通知</h3>
+              <p>自动通知安保、物业、消控、医务、行政和园区负责人，明确任务分工。</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>记录留痕</h3>
+              <p>指挥调度、语音文字、视频证据、处置结果完整留痕，事件结束后自动生成复盘报告。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section access-section" id="assurance">
+        <div class="section-heading">
+          <p class="eyebrow">重大活动或重点时段保障</p>
+          <h2>领导接待、重要会议、节假日值守、夜间巡防都有清单、有监测、有汇总</h2>
+          <p>围绕重点区域、重点任务和重点责任人建立保障方案，异常事件优先上报，保障任务自动推送，值班记录和事件汇总自动生成。</p>
+        </div>
+
+        <div class="assurance-grid">
+          <article class="assurance-card reception-card">
+            <div class="assurance-visual"></div>
+            <div class="command-title-line">
+              <span>接待</span>
+              <h3>领导接待保障</h3>
+            </div>
+            <p>围绕入口、路线、会议室、电梯、停车位和休息区提前布控，保障任务自动推送至责任人。</p>
+          </article>
+          <article class="assurance-card meeting-card">
+            <div class="assurance-visual"></div>
+            <div class="command-title-line">
+              <span>会议</span>
+              <h3>重要会议保障</h3>
+            </div>
+            <p>会前检查设备、秩序、保洁和网络状态，会中异常优先上报，会后生成保障记录。</p>
+          </article>
+          <article class="assurance-card holiday-card">
+            <div class="assurance-visual"></div>
+            <div class="command-title-line">
+              <span>值守</span>
+              <h3>节假日值守</h3>
+            </div>
+            <p>自动生成值班任务、巡查路线、事件汇总和值守日报，便于管理层快速掌握情况。</p>
+          </article>
+          <article class="assurance-card night-card">
+            <div class="assurance-visual"></div>
+            <div class="command-title-line">
+              <span>巡防</span>
+              <h3>夜间巡防保障</h3>
+            </div>
+            <p>重点区域实时监测，异常聚集、越界、滞留和设备离线优先进入值守事件池。</p>
+          </article>
+        </div>
+
+        <div class="roadmap-panel assurance-roadmap">
+          <h3>保障闭环</h3>
+          <ol>
+            <li><strong>任务清单自动推送</strong><span>根据保障方案拆解重点区域、责任岗位、检查项和完成时限。</span></li>
+            <li><strong>异常事件优先上报</strong><span>视频告警、工单、人工上报进入专项事件池，按等级通知负责人。</span></li>
+            <li><strong>记录和汇总自动生成</strong><span>自动整理值班记录、事件过程、处置结果和复盘建议，形成可汇报材料。</span></li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <button class="back-top" type="button" aria-label="返回顶部">↑</button>
+    <script src="./script.js"></script>
+  </body>
+</html>

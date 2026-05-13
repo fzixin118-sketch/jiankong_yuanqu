@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>物业服务中心｜园区智能运营平台</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="主导航">
+      <a class="brand" href="./index.html#top" aria-label="返回园区智能运营平台首页">
+        <span class="brand-mark"></span>
+        <span>园区智能运营平台</span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="./index.html#scenes">场景应用</a>
+        <a href="#attendance">考勤合规</a>
+        <a href="#visitor">访客通行</a>
+        <a href="#loop">轨迹闭环</a>
+      </nav>
+      <a class="nav-action" href="./index.html#scenes">返回应用层</a>
+    </header>
+
+    <main id="top">
+      <section class="module-hero property-hero" id="overview">
+        <div class="module-hero-copy">
+          <a class="back-link" href="./index.html#scenes">← 返回业务场景应用层</a>
+          <p class="eyebrow">应用模块 03 · 人员与通行管理类</p>
+          <h1>物业服务中心</h1>
+          <p class="hero-lede">
+            面向厂区、产业园、封闭园区和监管园区，把门禁、访客、视频、办公流程和物业服务联动起来，作为物业服务中心下的人员与通行管理能力，支撑考勤合规、访客预约、区域权限和异常滞留提醒。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#attendance">人员考勤与行为合规</a>
+            <a class="secondary-button" href="#visitor">访客与通行智能管理</a>
+            <a class="secondary-button" href="#loop">视频轨迹与异常复盘</a>
+          </div>
+        </div>
+
+        <div class="property-console" aria-label="物业服务中心通行看板">
+          <div class="console-header">
+            <span>物业通行服务总览</span>
+            <strong>当前状态：平稳</strong>
+          </div>
+          <div class="property-console-grid">
+            <div class="access-map-panel" aria-label="园区人员通行态势">
+              <span class="access-node gate-node">主入口</span>
+              <span class="access-node office-node">办公区</span>
+              <span class="access-node factory-node">生产区</span>
+              <span class="access-node risk-node">危险区</span>
+              <i class="route-line line-a"></i>
+              <i class="route-line line-b"></i>
+              <i class="route-line line-c"></i>
+            </div>
+            <div class="console-side">
+              <div>
+                <strong>96%</strong>
+                <span>重点岗位到岗</span>
+              </div>
+              <div>
+                <strong>18</strong>
+                <span>今日预约访客</span>
+              </div>
+              <div>
+                <strong>3m</strong>
+                <span>异常核验响应</span>
+              </div>
+            </div>
+          </div>
+          <div class="console-events">
+            <p><b>08:31</b> 危化仓值守岗位已完成到岗识别，班次状态正常。</p>
+            <p><b>10:12</b> 外协访客完成身份核验，已下发到访路线与区域权限。</p>
+            <p><b>11:05</b> 禁烟区疑似抽烟行为触发提醒，已联动物业与安保复核。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section module-section" id="attendance">
+        <div class="section-heading">
+          <p class="eyebrow">人员考勤与行为合规</p>
+          <h2>把关键岗位、工作区域和安全规范纳入持续识别</h2>
+          <p>适合厂区、产业园、封闭园区、监管园区等场景，复用视频分析能力，对到岗、离岗、串岗、PPE 穿戴、禁烟区抽烟和危险区域违规进入进行自动识别。</p>
+        </div>
+        <div class="solution-layout">
+          <div class="solution-panel">
+            <div class="panel-title">
+              <span>合规接入</span>
+              <strong>门禁、视频、岗位、区域、排班</strong>
+            </div>
+            <div class="property-flow" aria-label="人员考勤与行为合规接入关系">
+              <span>门禁记录</span>
+              <span>视频识别</span>
+              <span>岗位排班</span>
+              <strong>人员合规引擎</strong>
+              <span>区域权限</span>
+              <span>PPE 规则</span>
+              <span>禁入 / 禁烟规则</span>
+            </div>
+          </div>
+          <div class="capability-list">
+            <article>
+              <span>到岗</span>
+              <h3>重点岗位到岗识别</h3>
+              <p>围绕门岗、消控室、危化仓、装卸区等重点岗位，比对排班、门禁和视频确认到岗状态。</p>
+            </article>
+            <article>
+              <span>行为</span>
+              <h3>工作时间脱岗与区域串岗识别</h3>
+              <p>识别值守岗位长时间空岗、人员跨区域活动、未经授权进入生产或监管区域等行为。</p>
+            </article>
+            <article>
+              <span>规范</span>
+              <h3>PPE 穿戴与禁烟区抽烟识别</h3>
+              <p>在施工区、生产区、实验室和禁烟区识别安全帽、反光衣、防护服和抽烟等合规风险。</p>
+            </article>
+          </div>
+        </div>
+        <div class="command-scene-grid property-scene-grid">
+          <article class="inspection-card property-card post-card">
+            <div class="property-card-visual"></div>
+            <div class="command-title-line">
+              <span>岗位</span>
+              <h3>重点岗位到岗识别</h3>
+            </div>
+            <p>自动核验关键岗位人员是否按班次到达，并对迟到、缺岗、代岗形成提醒。</p>
+          </article>
+          <article class="inspection-card property-card offpost-card">
+            <div class="property-card-visual"></div>
+            <div class="command-title-line">
+              <span>离岗</span>
+              <h3>工作时间脱岗识别</h3>
+            </div>
+            <p>对值守类岗位设置时间阈值，识别长时间离开岗位和无人值守风险。</p>
+          </article>
+          <article class="inspection-card property-card crosszone-card">
+            <div class="property-card-visual"></div>
+            <div class="command-title-line">
+              <span>串岗</span>
+              <h3>区域串岗识别</h3>
+            </div>
+            <p>结合岗位职责和区域权限，发现非授权跨区、反复徘徊和异常停留。</p>
+          </article>
+          <article class="inspection-card property-card ppe-check-card">
+            <div class="property-card-visual"></div>
+            <div class="command-title-line">
+              <span>PPE</span>
+              <h3>PPE 穿戴识别</h3>
+            </div>
+            <p>识别安全帽、反光衣、防护服等装备穿戴情况，降低现场安全风险。</p>
+          </article>
+          <article class="inspection-card property-card smoking-card">
+            <div class="property-card-visual"></div>
+            <div class="command-title-line">
+              <span>禁烟</span>
+              <h3>禁烟区抽烟识别</h3>
+            </div>
+            <p>对仓储、生产、实验室和重点公共区域识别抽烟行为并推送现场复核。</p>
+          </article>
+          <article class="inspection-card property-card danger-entry-card">
+            <div class="property-card-visual"></div>
+            <div class="command-title-line">
+              <span>禁入</span>
+              <h3>危险区域违规进入识别</h3>
+            </div>
+            <p>对危险源、施工边界、设备间和监管区域识别违规进入并联动门禁策略。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section workflow-section" id="visitor">
+        <div class="section-heading">
+          <p class="eyebrow">访客与通行智能管理</p>
+          <h2>把预约审批、身份核验、路线引导和区域权限连成一条服务链</h2>
+          <p>结合门禁、访客、视频和办公流程，访客从预约到离园都可被授权、引导、提醒和追踪，减少前台、岗亭和物业客服的重复确认。</p>
+        </div>
+        <div class="visitor-service-chain" aria-label="访客与通行智能管理服务链">
+          <div class="service-chain-copy">
+            <div class="panel-title">
+              <span>一条服务链</span>
+              <strong>预约、核验、引导、授权</strong>
+            </div>
+            <h3>访客从预约到离园，权限和轨迹持续联动</h3>
+            <p>把办公审批、入口核验、门禁梯控、停车权限和视频轨迹串成连续服务，物业、被访人、岗亭和安保各自接收需要处理的节点。</p>
+            <div class="service-chain-tags" aria-label="服务链覆盖能力">
+              <span>预约审批</span>
+              <span>身份核验</span>
+              <span>路线引导</span>
+              <span>区域授权</span>
+              <span>超时提醒</span>
+            </div>
+          </div>
+          <figure class="service-chain-visual">
+            <img src="./assets/property/visitor-service-chain.png" alt="访客预约、身份核验、路线引导和区域权限控制的一体化服务链示意图" />
+          </figure>
+          <div class="service-chain-steps">
+            <article>
+              <span>01</span>
+              <h3>访客预约审批</h3>
+              <p>由被访人或物业发起预约，自动补齐到访事由、时间、车辆和同行人员。</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>访客身份核验</h3>
+              <p>在入口完成证件、人脸、预约信息和黑名单比对，异常自动转人工复核。</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>到访路线引导</h3>
+              <p>根据预约对象和停车位置推送通行路径，减少访客在园区内无序流动。</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>区域权限控制</h3>
+              <p>按预约时间和到访范围下发门禁、梯控和停车权限，到期自动失效。</p>
+            </article>
+          </div>
+        </div>
+        <div class="ops-card-grid ticket-team-grid visitor-card-grid">
+          <article class="inspection-card ticket-team-card timeout-card">
+            <div class="ops-card-visual visitor-visual"></div>
+            <div class="command-title-line">
+              <span>滞留</span>
+              <h3>超时滞留提醒</h3>
+            </div>
+            <p>访客超过预约时段仍未离开时，联动被访人、物业前台和安保岗亭提醒。</p>
+          </article>
+          <article class="inspection-card ticket-team-card blacklist-card">
+            <div class="ops-card-visual visitor-visual"></div>
+            <div class="command-title-line">
+              <span>名单</span>
+              <h3>黑名单人员预警</h3>
+            </div>
+            <p>对黑名单、重点关注人员和证件异常人员进行入口拦截与人工核验。</p>
+          </article>
+          <article class="inspection-card ticket-team-card permission-card">
+            <div class="ops-card-visual visitor-visual"></div>
+            <div class="command-title-line">
+              <span>权限</span>
+              <h3>到访区域权限控制</h3>
+            </div>
+            <p>限定楼栋、楼层、房间和重点区域权限，支持临时授权与到期回收。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section access-section" id="loop">
+        <div class="section-heading">
+          <p class="eyebrow">视频轨迹与异常复盘</p>
+          <h2>用视频联动补齐“人在哪里、去过哪、停留多久”的证据链</h2>
+          <p>与视频分析结合后，系统可对访客轨迹回溯、重点区域异常停留和通行事件复盘提供证据，复用监所视频分析能力，降低重复研发成本。</p>
+        </div>
+        <div class="warning-layout">
+          <div class="warning-cards property-loop-cards">
+            <article class="warning-card property-loop-card track-card">
+              <div class="property-loop-visual"></div>
+              <div class="command-title-line">
+                <span>轨迹</span>
+                <h3>访客轨迹回溯</h3>
+              </div>
+              <p>按访客、时间、门禁点位和视频点位回放到访路径，辅助事后核查。</p>
+            </article>
+            <article class="warning-card property-loop-card stay-card">
+              <div class="property-loop-visual"></div>
+              <div class="command-title-line">
+                <span>停留</span>
+                <h3>重点区域异常停留分析</h3>
+              </div>
+              <p>对机房、仓储、生产、实验室等重点区域设置停留阈值和异常规则。</p>
+            </article>
+            <article class="warning-card property-loop-card reuse-card">
+              <div class="property-loop-visual"></div>
+              <div class="command-title-line">
+                <span>复用</span>
+                <h3>视频分析能力技术复用</h3>
+              </div>
+              <p>复用人员识别、行为识别、区域越界、异常停留等算法能力，快速扩展物业场景。</p>
+            </article>
+          </div>
+          <div class="roadmap-panel">
+            <h3>闭环处置路径</h3>
+            <ol>
+              <li><strong>事前授权</strong><span>预约审批、身份核验、区域权限和路线策略提前配置。</span></li>
+              <li><strong>事中识别</strong><span>门禁、访客、视频和岗位规则实时比对，异常自动提醒。</span></li>
+              <li><strong>事后复盘</strong><span>回溯轨迹、停留、视频片段和处置记录，沉淀风险规则。</span></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button class="back-top" type="button" aria-label="返回顶部">↑</button>
+    <script src="./script.js"></script>
+  </body>
+</html>

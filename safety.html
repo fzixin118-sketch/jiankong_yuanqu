@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>安全管理中心｜园区智能运营平台</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="主导航">
+      <a class="brand" href="./index.html#top" aria-label="返回园区智能运营平台首页">
+        <span class="brand-mark"></span>
+        <span>园区智能运营平台</span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="./index.html#scenes">场景应用</a>
+        <a href="#command">安防指挥</a>
+        <a href="#inspection">智能巡检</a>
+        <a href="#warning">异常预警</a>
+      </nav>
+      <a class="nav-action" href="./index.html#scenes">返回应用层</a>
+    </header>
+
+    <main id="top">
+      <section class="module-hero safety-hero" id="overview">
+        <div class="module-hero-copy">
+          <a class="back-link" href="./index.html#scenes">← 返回业务场景应用层</a>
+          <p class="eyebrow">应用模块 01</p>
+          <h1>安全管理中心</h1>
+          <p class="hero-lede">
+            面向园区安保、消控、应急值守与管理层，把视频监控、门禁、访客、周界报警、停车系统和弱联网设备状态统一接入，形成一个可看、可判、可派单、可复盘的安防总平台。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#command">园区综合安防指挥</a>
+            <a class="secondary-button" href="#inspection">重点区域智能巡检</a>
+            <a class="secondary-button" href="#warning">设备异常预警与运维协同</a>
+          </div>
+        </div>
+
+        <div class="security-console" aria-label="安全管理中心态势看板">
+          <div class="console-header">
+            <span>安全态势总览</span>
+            <strong>当前风险等级：中</strong>
+          </div>
+          <div class="console-grid">
+            <div class="console-map">
+              <span class="risk-point point-a">周界</span>
+              <span class="risk-point point-b">门禁</span>
+              <span class="risk-point point-c">消防</span>
+              <span class="risk-point point-d">车辆</span>
+            </div>
+            <div class="console-side">
+              <div>
+                <strong>98.6%</strong>
+                <span>设备在线率</span>
+              </div>
+              <div>
+                <strong>24</strong>
+                <span>今日告警</span>
+              </div>
+              <div>
+                <strong>4m</strong>
+                <span>平均响应</span>
+              </div>
+            </div>
+          </div>
+          <div class="console-events">
+            <p><b>09:42</b> A 区东侧周界出现异常停留，已联动最近摄像机。</p>
+            <p><b>10:18</b> 3 号楼消防通道占用，已生成物业协同工单。</p>
+            <p><b>11:06</b> 主入口访客证件校验异常，已通知岗亭复核。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section module-section" id="command">
+        <div class="section-heading">
+          <p class="eyebrow">园区综合安防指挥</p>
+          <h2>把分散系统统一接入，形成园区安防总平台</h2>
+          <p>视频监控、门禁、访客、周界报警和停车系统统一进入事件池，安保人员可以在一处完成态势查看、事件研判、联动处置和结果追踪。</p>
+        </div>
+        <div class="solution-layout">
+          <div class="solution-panel">
+            <div class="panel-title">
+              <span>统一接入</span>
+              <strong>视频、门禁、访客、周界、停车</strong>
+            </div>
+            <div class="platform-flow" aria-label="安防总平台接入关系">
+              <span>视频监控</span>
+              <span>门禁系统</span>
+              <span>访客系统</span>
+              <strong>安防总平台</strong>
+              <span>周界报警</span>
+              <span>停车系统</span>
+              <span>应急联动</span>
+            </div>
+          </div>
+          <div class="capability-list">
+            <article>
+              <span>态势</span>
+              <h3>一张图看全域风险</h3>
+              <p>聚合摄像头点位、门禁记录、访客通行、车辆进出和周界报警，呈现实时风险分布。</p>
+            </article>
+            <article>
+              <span>研判</span>
+              <h3>告警自动关联证据</h3>
+              <p>告警触发后自动带出位置、人员、车辆、视频片段和历史记录，减少人工跨系统检索。</p>
+            </article>
+            <article>
+              <span>处置</span>
+              <h3>联动工单与现场响应</h3>
+              <p>支持通知岗亭、调度巡逻、联动门禁和派发工单，处置过程全程留痕。</p>
+            </article>
+          </div>
+        </div>
+        <div class="command-scene-grid">
+          <article class="inspection-card command-card stranger-card">
+            <div class="command-visual">
+              <img src="./assets/security/command-stranger.png" alt="">
+            </div>
+            <div class="command-title-line">
+              <span>通行</span>
+              <h3>陌生人闯入识别</h3>
+            </div>
+            <p>面向园区出入口、楼宇大堂、停车场和办公区域，识别未授权进入、尾随通行和异常闯入。</p>
+          </article>
+          <article class="inspection-card command-card night-card">
+            <div class="command-visual">
+              <img src="./assets/security/command-night.png" alt="">
+            </div>
+            <div class="command-title-line">
+              <span>夜间</span>
+              <h3>夜间异常滞留识别</h3>
+            </div>
+            <p>对夜间园区道路、广场、停车场和楼宇外场的异常停留、徘徊、越界行为进行提醒。</p>
+          </article>
+          <article class="inspection-card command-card crowd-card">
+            <div class="command-visual">
+              <img src="./assets/security/command-crowd.png" alt="">
+            </div>
+            <div class="command-title-line">
+              <span>秩序</span>
+              <h3>人员聚集 / 冲突 / 摔倒识别</h3>
+            </div>
+            <p>对公共大厅、食堂、出入口等人流密集区域识别人群聚集、冲突苗头和摔倒事件。</p>
+          </article>
+          <article class="inspection-card command-card border-card">
+            <div class="command-visual">
+              <img src="./assets/security/command-border.png" alt="">
+            </div>
+            <div class="command-title-line">
+              <span>周界</span>
+              <h3>周界入侵与越界识别</h3>
+            </div>
+            <p>围墙、围栏、园区边界和施工边界支持入侵、翻越、跨线等异常识别并联动处置。</p>
+          </article>
+          <article class="inspection-card command-card climb-card">
+            <div class="command-visual">
+              <img src="./assets/security/command-climb.png" alt="">
+            </div>
+            <div class="command-title-line">
+              <span>行为</span>
+              <h3>越界 / 翻越 / 徘徊识别</h3>
+            </div>
+            <p>对围栏、楼宇入口、停车场边界和重点通道识别翻越护栏、跨线进入和长时间徘徊。</p>
+          </article>
+          <article class="inspection-card command-card vehicle-card">
+            <div class="command-visual">
+              <img src="./assets/security/command-vehicle.png" alt="">
+            </div>
+            <div class="command-title-line">
+              <span>车辆</span>
+              <h3>车辆违停 / 逆行 / 占道识别</h3>
+            </div>
+            <p>识别园区道路、停车出入口和装卸区的违停、逆行、占道、拥堵等通行秩序问题。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section workflow-section" id="inspection">
+        <div class="section-heading">
+          <p class="eyebrow">重点区域智能巡检</p>
+          <h2>围绕机房、配电间、泵房、消防通道、仓储区、实验室持续识别异常</h2>
+          <p>先覆盖高风险空间的视觉识别和巡检任务，后续可继续接入更多物联感知数据，让巡检从“人工看现场”升级为“系统先发现”。</p>
+        </div>
+        <div class="inspection-grid">
+          <article class="inspection-card zone-card access-card">
+            <div class="zone-visual"></div>
+            <div class="command-title-line">
+              <span>门禁</span>
+              <h3>无人值守区域异常识别</h3>
+            </div>
+            <p>关注无人值守配电间、泵房、机房的非授权进入、异常停留和门禁异常。</p>
+          </article>
+          <article class="inspection-card zone-card ppe-card">
+            <div class="zone-visual"></div>
+            <div class="command-title-line">
+              <span>规范</span>
+              <h3>人员未佩戴安全装备识别</h3>
+            </div>
+            <p>对实验室、施工区、设备间等场景识别安全帽、防护服、反光衣等佩戴规范。</p>
+          </article>
+          <article class="inspection-card zone-card fire-card">
+            <div class="zone-visual"></div>
+            <div class="command-title-line">
+              <span>消防</span>
+              <h3>消防通道堵塞识别</h3>
+            </div>
+            <p>识别消防通道堆物、车辆占用、门前遮挡等风险，推送物业与安保协同处理。</p>
+          </article>
+          <article class="inspection-card zone-card smoke-card">
+            <div class="zone-visual"></div>
+            <div class="command-title-line">
+              <span>环境</span>
+              <h3>烟火 / 积水 / 异常开门状态识别</h3>
+            </div>
+            <p>针对仓储区、设备间、走廊和出入口识别烟火、积水、门异常开启等隐患。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section access-section" id="warning">
+        <div class="section-heading">
+          <p class="eyebrow">设备异常预警与运维协同</p>
+          <h2>先从弱联网状态信息做起，逐步接入物联数据</h2>
+          <p>现阶段优先纳入设备在线、离线、告警、容量、开门和通知状态，形成轻量预警和工单协同；后续再扩展到传感器、能耗、环境和设备运行数据。</p>
+        </div>
+        <div class="warning-layout">
+          <div class="warning-cards">
+            <article class="warning-card camera-warning">
+              <div class="warning-visual"></div>
+              <div class="command-title-line">
+                <span>视频</span>
+                <h3>摄像头离线</h3>
+              </div>
+              <p>发现关键点位视频中断后，自动生成巡检或维修工单。</p>
+            </article>
+            <article class="warning-card door-warning">
+              <div class="warning-visual"></div>
+              <div class="command-title-line">
+                <span>门禁</span>
+                <h3>门禁异常开门</h3>
+              </div>
+              <p>识别门禁长开、异常开门、强行进入等状态并联动安保复核。</p>
+            </article>
+            <article class="warning-card network-warning">
+              <div class="warning-visual"></div>
+              <div class="command-title-line">
+                <span>网络</span>
+                <h3>网络设备异常</h3>
+              </div>
+              <p>纳管交换机、网关、摄像头链路等弱联网状态，定位影响范围。</p>
+            </article>
+            <article class="warning-card storage-warning">
+              <div class="warning-visual"></div>
+              <div class="command-title-line">
+                <span>存储</span>
+                <h3>存储容量不足</h3>
+              </div>
+              <p>对录像存储、事件附件和日志空间做容量提醒，避免关键证据丢失。</p>
+            </article>
+            <article class="warning-card ups-warning">
+              <div class="warning-visual"></div>
+              <div class="command-title-line">
+                <span>电力</span>
+                <h3>UPS 告警</h3>
+              </div>
+              <p>先记录告警状态、影响设备和处理人，后续接入电量、负载等物联数据。</p>
+            </article>
+            <article class="warning-card elevator-warning">
+              <div class="warning-visual"></div>
+              <div class="command-title-line">
+                <span>电梯</span>
+                <h3>电梯故障通知联动</h3>
+              </div>
+              <p>对接电梯故障通知，联动值班、物业、安保和应急处置流程。</p>
+            </article>
+          </div>
+          <div class="roadmap-panel">
+            <h3>接入节奏</h3>
+            <ol>
+              <li><strong>第一阶段</strong><span>设备在线、离线、告警、容量、开门状态</span></li>
+              <li><strong>第二阶段</strong><span>门禁、停车、消防、视频平台事件联动</span></li>
+              <li><strong>第三阶段</strong><span>接入温湿度、水浸、电力、能耗等物联数据</span></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button class="back-top" type="button" aria-label="返回顶部">↑</button>
+    <script src="./script.js"></script>
+  </body>
+</html>

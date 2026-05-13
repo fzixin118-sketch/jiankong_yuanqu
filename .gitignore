@@ -1,0 +1,29 @@
+.DS_Store
+Thumbs.db
+
+# Editor and OS metadata
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Dependencies
+node_modules/
+
+# Build output and caches
+dist/
+build/
+.cache/
+.parcel-cache/
+.vite/
+.next/
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
+
+# Environment files
+.env
+.env.*
+!.env.example
