@@ -1,0 +1,162 @@
+/* Safety page final overrides. Loaded after the shared stylesheet. */
+.safety-hero .safety-cockpit-wrap {
+  max-width: 840px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit {
+  aspect-ratio: 16 / 10;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-topbar {
+  height: 44px;
+  padding: 0 18px;
+  font-size: 12px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-topbar strong {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-tabs {
+  height: 31px;
+  gap: 22px;
+  font-size: 12px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-tabs span {
+  padding-top: 6px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-main {
+  height: calc(100% - 125px);
+  min-height: 0;
+  padding: 10px 14px 0;
+}
+
+.safety-hero .safety-cockpit-wrap .campus-stage {
+  inset: 10px 14px 0;
+}
+
+.safety-hero .safety-cockpit-wrap .hud-panel {
+  top: 12px;
+  bottom: 10px;
+  width: 238px;
+  padding: 12px;
+}
+
+.safety-hero .safety-cockpit-wrap .hud-left {
+  left: 14px;
+}
+
+.safety-hero .safety-cockpit-wrap .hud-right {
+  right: 14px;
+}
+
+.safety-hero .safety-cockpit-wrap .hud-panel h3 {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.1;
+}
+
+.safety-hero .safety-cockpit-wrap .camera-list {
+  gap: 7px;
+  margin-bottom: 12px;
+}
+
+.safety-hero .safety-cockpit-wrap .camera-list div {
+  grid-template-columns: 50px minmax(76px, 1fr) 28px;
+  gap: 7px;
+  min-height: 38px;
+  font-size: 11px;
+}
+
+.safety-hero .safety-cockpit-wrap .camera-list img {
+  width: 50px;
+  height: 31px;
+}
+
+.safety-hero .safety-cockpit-wrap .camera-list span {
+  white-space: nowrap;
+}
+
+.safety-hero .safety-cockpit-wrap .camera-list b {
+  min-width: 28px;
+  font-size: 11px;
+}
+
+.safety-hero .safety-cockpit-wrap .risk-bars {
+  gap: 7px;
+}
+
+.safety-hero .safety-cockpit-wrap .risk-bars label {
+  grid-template-columns: 58px 1fr 26px;
+  gap: 6px;
+  font-size: 11px;
+}
+
+.safety-hero .safety-cockpit-wrap .risk-bars b {
+  font-size: 11px;
+}
+
+.safety-hero .safety-cockpit-wrap .donut-chart {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 7px;
+}
+
+.safety-hero .safety-cockpit-wrap .donut-chart::after {
+  left: 23px;
+  top: 23px;
+  width: 38px;
+  height: 38px;
+}
+
+.safety-hero .safety-cockpit-wrap .donut-chart span {
+  font-size: 15px;
+}
+
+.safety-hero .safety-cockpit-wrap .donut-chart small {
+  font-size: 8px;
+}
+
+.safety-hero .safety-cockpit-wrap .legend {
+  gap: 5px 7px;
+  margin-bottom: 9px;
+  font-size: 10px;
+}
+
+.safety-hero .safety-cockpit-wrap .legend span {
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.safety-hero .safety-cockpit-wrap .trend-card {
+  height: 58px;
+  padding: 6px;
+}
+
+.safety-hero .safety-cockpit-wrap .trend-card polyline {
+  stroke-width: 3;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-dock {
+  height: 50px;
+  gap: 10px;
+  padding: 6px 14px 8px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-dock div {
+  min-height: 36px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-dock strong {
+  font-size: 20px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-dock span {
+  margin-top: 2px;
+  font-size: 10px;
+  line-height: 1.1;
+  white-space: nowrap;
+}

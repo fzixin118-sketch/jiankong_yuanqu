@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>运营管理与指挥｜园区智能运营平台</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./command-overrides.css?v=emergency-example-visual" />
   </head>
   <body>
     <header class="site-header" aria-label="主导航">
@@ -15,6 +16,7 @@
       <nav class="nav-links" aria-label="页面导航">
         <a href="./index.html#scenes">场景应用</a>
         <a href="#dashboard">运营驾驶舱</a>
+        <a href="#report">运营报告</a>
         <a href="#emergency">应急助手</a>
         <a href="#assurance">重点保障</a>
       </nav>
@@ -26,12 +28,13 @@
         <div class="module-hero-copy">
           <a class="back-link" href="./index.html#scenes">← 返回业务场景应用层</a>
           <p class="eyebrow">应用模块 06</p>
-          <h1>运营管理与指挥</h1>
+          <h1><span>Command Center</span>运营管理与指挥</h1>
           <p class="hero-lede">
             面向园区管理层、运营中心、应急值守和重大活动保障团队，把安防、物业、服务、办公、告警、工单等数据统一汇总，形成一屏统览、预案联动、任务闭环和复盘留痕的指挥中枢。
           </p>
           <div class="hero-actions">
             <a class="primary-button" href="#dashboard">园区智能运营驾驶舱</a>
+            <a class="secondary-button" href="#report">自动生成运营报告</a>
             <a class="secondary-button" href="#emergency">应急预案智能助手</a>
             <a class="secondary-button" href="#assurance">重大活动与重点时段保障</a>
           </div>
@@ -135,9 +138,7 @@
               <span><i class="legend-warn"></i>待处置事件</span>
               <span><i class="legend-ok"></i>在线设备</span>
             </div>
-          </div>
 
-          <aside class="dashboard-side">
             <div class="dashboard-kpis">
               <article>
                 <span>今日告警</span>
@@ -159,6 +160,25 @@
                 <strong>78%</strong>
                 <small>剩余车位 196 个</small>
               </article>
+            </div>
+          </div>
+
+          <aside class="dashboard-side">
+            <div class="device-overview" aria-label="设备总览">
+              <div class="device-overview-top">
+                <div>
+                  <span>设备总览</span>
+                  <strong>重点设备运行状态</strong>
+                </div>
+                <b>在线</b>
+              </div>
+              <div class="device-ring-grid">
+                <div class="device-ring"><strong>99/100</strong><span>空调设备</span><small>正常运行</small></div>
+                <div class="device-ring"><strong>49/49</strong><span>人脸闸机</span><small>正常运行</small></div>
+                <div class="device-ring"><strong>71/71</strong><span>安防设备</span><small>正常运行</small></div>
+                <div class="device-ring"><strong>41/41</strong><span>照明设备</span><small>正常运行</small></div>
+                <div class="device-ring device-ring-warn"><strong>24/38</strong><span>电梯设备</span><small>需关注</small></div>
+              </div>
             </div>
 
             <div class="dashboard-analysis" aria-label="运营数据汇总可视化">
@@ -195,6 +215,77 @@
         </div>
       </section>
 
+      <section class="section access-section" id="report">
+        <div class="section-heading">
+          <p class="eyebrow">自动生成运营周报 / 月报</p>
+          <h2>只需一句“生成本周智慧园区运营报告”</h2>
+          <p>系统自动汇总园区客流趋势、企业入驻情况、访客增长率、工单完成率和能耗对比，形成可编辑、可复核、可汇报的运营报告草稿。</p>
+        </div>
+        <div class="weekly-report-preview" aria-label="智慧园区运营周报样例">
+          <div class="weekly-report-head">
+            <div>
+              <span>周报举例</span>
+              <h3>智慧园区运营周报 · 第 20 周</h3>
+            </div>
+            <b>2026.05.11 - 05.17</b>
+          </div>
+
+          <div class="weekly-report-grid">
+            <article class="report-brief-card">
+              <span>管理摘要</span>
+              <p>本周园区整体运行平稳，客流与访客均保持增长，工单完成率维持在 94%。主要风险集中在午高峰访客核验排队、B 座空调能耗偏高和 3 单跨部门工单超时。</p>
+              <div class="brief-metrics" aria-label="周报核心结论">
+                <i><strong>平稳</strong><small>综合运行</small></i>
+                <i><strong>+12.8%</strong><small>客流环比</small></i>
+                <i><strong>3项</strong><small>重点风险</small></i>
+              </div>
+            </article>
+
+            <article class="report-trend-card">
+              <span>趋势</span>
+              <div class="weekly-bars" aria-label="周一至周日客流趋势">
+                <i style="--h: 48%"><b>一</b></i>
+                <i style="--h: 56%"><b>二</b></i>
+                <i style="--h: 62%"><b>三</b></i>
+                <i style="--h: 74%"><b>四</b></i>
+                <i style="--h: 86%"><b>五</b></i>
+                <i style="--h: 68%"><b>六</b></i>
+                <i style="--h: 58%"><b>日</b></i>
+              </div>
+              <p>工作日客流环比 +12.8%，周五达到峰值，主要来自招商接待和企业培训活动。</p>
+            </article>
+
+            <article class="report-alert-card">
+              <span>异常</span>
+              <ul>
+                <li><strong>访客排队</strong><em>南门 11:00-12:00 平均等待 7 分钟</em></li>
+                <li><strong>能耗波动</strong><em>B 座空调能耗较均值高 9.4%</em></li>
+                <li><strong>工单超时</strong><em>跨部门协同工单 3 单超过 SLA</em></li>
+              </ul>
+            </article>
+
+            <article class="report-cause-card">
+              <span>原因分析</span>
+              <div class="cause-map">
+                <i>活动集中</i>
+                <i>访客预审不足</i>
+                <i>设备策略未调优</i>
+              </div>
+              <p>本周活动集中在周四、周五，访客批量到访但预审材料提交不完整；B 座会议区延长使用后，空调策略未随时段同步调整。</p>
+            </article>
+
+            <article class="report-next-card">
+              <span>下周建议</span>
+              <ol>
+                <li>对 50 人以上活动提前 1 天完成访客预审和分时入园。</li>
+                <li>将 B 座会议区空调切换为活动日节能策略，日终复核能耗。</li>
+                <li>跨部门工单增加 4 小时预警，超时自动升级至值班主管。</li>
+              </ol>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="section workflow-section" id="emergency">
         <div class="section-heading">
           <p class="eyebrow">园区应急预案智能助手</p>
@@ -203,19 +294,6 @@
         </div>
 
         <div class="emergency-layout">
-          <div class="emergency-assistant">
-            <div class="assistant-card">
-              <span>事件识别</span>
-              <h3>B 区二层烟感告警</h3>
-              <p>已匹配《火警初期处置预案》，建议启动现场确认、广播提醒、消防通道清空和消控联动。</p>
-            </div>
-            <div class="assistant-actions">
-              <button type="button">生成处置流程</button>
-              <button type="button">通知责任人</button>
-              <button type="button">生成复盘报告</button>
-            </div>
-          </div>
-
           <div class="emergency-steps">
             <article>
               <span>01</span>
@@ -237,6 +315,24 @@
               <h3>记录留痕</h3>
               <p>指挥调度、语音文字、视频证据、处置结果完整留痕，事件结束后自动生成复盘报告。</p>
             </article>
+          </div>
+
+          <div class="emergency-example">
+            <div class="emergency-example-visual" aria-hidden="true">
+              <i class="smoke-point">B2</i>
+              <i class="route-line"></i>
+              <i class="fire-gate">消控</i>
+            </div>
+            <div class="emergency-example-copy">
+              <span>示例</span>
+              <strong>B 区二层烟感告警</strong>
+              <p>系统匹配《火警初期处置预案》，判断为二级响应，自动生成现场确认、广播提醒、消防通道清空和消控联动任务。</p>
+            </div>
+            <div class="emergency-example-flow" aria-label="烟感告警处置示意">
+              <b>派安保 3 分钟到场</b>
+              <b>通知消控联动排查</b>
+              <b>生成处置记录</b>
+            </div>
           </div>
         </div>
       </section>

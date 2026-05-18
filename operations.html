@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>运维中心｜园区智能运营平台</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./operations-overrides.css" />
   </head>
   <body>
     <header class="site-header" aria-label="主导航">
@@ -26,7 +27,7 @@
         <div class="module-hero-copy">
           <a class="back-link" href="./index.html#scenes">← 返回业务场景应用层</a>
           <p class="eyebrow">应用模块 02</p>
-          <h1>运维中心</h1>
+          <h1><span>Operations Center</span>运维中心</h1>
           <p class="hero-lede">
             面向工程运维、弱电维护、新员工培训与第三方驻场团队，把设备知识、巡检制度、设施报修和工单处置统一沉淀，形成可问、可派、可追踪、可复盘的园区运维服务平台。
           </p>
@@ -187,6 +188,14 @@
               <h3>设备维修与设施处理</h3>
             </div>
             <p>承接暖通、给排水、强弱电、照明、电梯等设施设备报修。</p>
+            <div class="closed-loop-example">
+              <strong>例：空调不制冷</strong>
+              <ol>
+                <li>员工提交报修，AI 识别楼层、设备和故障。</li>
+                <li>自动派给工程班组，带出历史维修记录。</li>
+                <li>维修完成上传照片，结果回写为案例。</li>
+              </ol>
+            </div>
           </article>
           <article class="inspection-card ticket-team-card security-team-card">
             <div class="ops-card-visual"></div>
@@ -195,6 +204,14 @@
               <h3>秩序与通行协同</h3>
             </div>
             <p>处理门禁异常、访客协助、车辆占道、现场秩序和安全联动。</p>
+            <div class="closed-loop-example">
+              <strong>例：消防通道占用</strong>
+              <ol>
+                <li>系统识别车辆占道，生成秩序事件。</li>
+                <li>派单给安保巡逻，同步通知物业客服。</li>
+                <li>现场处理后回传结果，沉淀处置记录。</li>
+              </ol>
+            </div>
           </article>
           <article class="inspection-card ticket-team-card cleaning-card">
             <div class="ops-card-visual"></div>
@@ -203,6 +220,14 @@
               <h3>环境卫生服务响应</h3>
             </div>
             <p>接收公共区域清洁、垃圾清运、积水污渍、卫生间异常等任务。</p>
+            <div class="closed-loop-example">
+              <strong>例：大堂地面积水</strong>
+              <ol>
+                <li>前台或摄像头发现积水，触发清洁任务。</li>
+                <li>派给就近保洁，并标记安全提醒。</li>
+                <li>清理完成拍照确认，关闭工单并复盘。</li>
+              </ol>
+            </div>
           </article>
         </div>
       </section>

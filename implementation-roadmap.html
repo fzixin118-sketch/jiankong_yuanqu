@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>全域运营落地路径｜园区智能运营平台</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./implementation-roadmap.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="主导航">
+      <a class="brand" href="./index.html#top" aria-label="返回园区智能运营平台首页">
+        <span class="brand-mark"></span>
+        <span>园区智能运营平台</span>
+      </a>
+      <nav class="nav-links" aria-label="页面导航">
+        <a href="#scenes">切入场景</a>
+        <a href="#architecture">架构内容</a>
+        <a href="#steps">实施步骤</a>
+        <a href="#target">全域运营</a>
+      </nav>
+      <a class="nav-action" href="./index.html#implementation">返回首页路径</a>
+    </header>
+
+    <main id="top">
+      <section class="module-hero command-hero roadmap-hero" id="overview">
+        <div class="module-hero-copy">
+          <a class="back-link" href="./index.html#implementation">← 返回首页落地路径</a>
+          <p class="eyebrow">Landing Roadmap</p>
+          <h1><span>从试点闭环到全域运营</span>先跑通安全与运维，再扩展为统一运营底座</h1>
+          <p class="hero-lede">
+            最靠谱的落地路径不是先做“大而全驾驶舱”，而是用安全事件、运维工单和知识问答打通发现、判断、派发、处置、复盘，再逐步接入物业、办公、招商和指挥。
+          </p>
+          <div class="roadmap-principle" aria-label="核心落地原则">
+            <span>核心判断</span>
+            <p>
+              不要先做“大而全驾驶舱”，先用
+              <strong>安全事件 + 运维工单 + 知识问答</strong>
+              打通闭环，再把闭环数据汇总到运营指挥，最后扩展到物业、办公、招商，形成全域运营。
+            </p>
+          </div>
+          <div class="hero-actions">
+            <a class="primary-button" href="#steps">查看实施步骤</a>
+            <a class="secondary-button" href="#scenes">查看优先场景</a>
+            <a class="secondary-button" href="#target">全域目标</a>
+          </div>
+        </div>
+
+        <div class="roadmap-console" aria-label="全域运营落地路径总览">
+          <div class="console-header">
+            <span>落地主线</span>
+            <strong>先闭环 · 再沉淀 · 后扩展</strong>
+          </div>
+          <div class="roadmap-orbit" aria-label="从试点到全域运营的闭环链路">
+            <strong>全域运营</strong>
+            <span>安全事件</span>
+            <span>运维工单</span>
+            <span>知识问答</span>
+            <span>物业服务</span>
+            <span>运营指挥</span>
+            <span>招商经营</span>
+          </div>
+          <div class="roadmap-kpis" aria-label="首期交付目标">
+            <article><strong>8个月+</strong><span>全域建设周期</span></article>
+            <article><strong>3类</strong><span>首期闭环场景</span></article>
+            <article><strong>6阶段</strong><span>分步推进路径</span></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section module-section" id="scenes">
+        <div class="section-heading">
+          <p class="eyebrow">先从哪些应用场景入手</p>
+          <h2>按“高频、高风险、可闭环、可复制”排序</h2>
+          <p>首批场景要能快速证明价值，并能把数据、工单、知识和管理指标沉淀下来，后续扩展才不会变成重复建设。</p>
+        </div>
+
+        <div class="priority-grid">
+          <article class="priority-card priority-main">
+            <span>01</span>
+            <h3>安全管理中心</h3>
+            <p>先做视频、门禁、消防、停车和周界事件，因为它最能体现实时感知和跨部门处置价值。</p>
+            <ul>
+              <li>摄像头离线</li>
+              <li>门禁异常开门</li>
+              <li>消防通道占用</li>
+              <li>陌生人闯入</li>
+              <li>夜间异常滞留</li>
+              <li>车辆占道</li>
+            </ul>
+          </article>
+          <article class="priority-card priority-main">
+            <span>02</span>
+            <h3>运维中心</h3>
+            <p>承接安全事件和设施报修，把问题自动派给工程、弱电、物业等责任团队。</p>
+            <ul>
+              <li>设备离线自动工单</li>
+              <li>空调、照明、门禁报修</li>
+              <li>弱电设备故障</li>
+              <li>巡检制度知识库</li>
+              <li>维修结果回传</li>
+            </ul>
+          </article>
+          <article class="priority-card">
+            <span>03</span>
+            <h3>物业服务中心</h3>
+            <p>覆盖访客、通行、秩序、保洁和租户诉求，让物业服务从被动登记转向主动管控。</p>
+          </article>
+          <article class="priority-card">
+            <span>04</span>
+            <h3>运营管理与指挥</h3>
+            <p>在前三类中心跑出真实数据后，再汇总事件、工单、设备、SLA 和风险指标。</p>
+          </article>
+          <article class="priority-card">
+            <span>05</span>
+            <h3>企业办公与服务中心</h3>
+            <p>知识库稳定后接入制度问答、服务台、材料指引、通知公文和运营报告生成。</p>
+          </article>
+          <article class="priority-card">
+            <span>06</span>
+            <h3>招商中心</h3>
+            <p>在政策库、企业服务和入驻企业数据稳定后，再做画像、政策适配和线索推荐。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section workflow-section" id="architecture">
+        <div class="section-heading">
+          <p class="eyebrow">先用架构里的哪些内容</p>
+          <h2>首期只启用支撑闭环的关键能力</h2>
+          <p>架构不要一次性全铺开，先把事件接入、权限审计、数据治理、知识库和流程编排打牢。</p>
+        </div>
+
+        <div class="architecture-use-grid">
+          <article>
+            <span>接入层</span>
+            <h3>智能化基础设施接入层</h3>
+            <p>先接视频监控、门禁、访客、停车、消防、设备状态和工单系统，优先选择高风险点位和高频点位。</p>
+          </article>
+          <article>
+            <span>公共层</span>
+            <h3>基础设施公共层</h3>
+            <p>先搭 API 网关、统一认证、权限管理、日志审计、消息通知和对象存储，保障协同留痕。</p>
+          </article>
+          <article>
+            <span>中枢层</span>
+            <h3>数据与知识中枢层</h3>
+            <p>建立楼栋、楼层、房间、设备、人员、企业、车辆、事件、工单的统一编码和主数据。</p>
+          </article>
+          <article>
+            <span>AI层</span>
+            <h3>AI 能力引擎层</h3>
+            <p>首批只上视觉识别、知识问答、智能工单和报告生成，确保能力能被业务流程调用。</p>
+          </article>
+        </div>
+
+        <div class="asset-panel">
+          <div class="panel-title">
+            <span>首期知识资产</span>
+            <strong>让处置有依据、回传能复用</strong>
+          </div>
+          <div class="asset-tags">
+            <span>设备说明书</span>
+            <span>运维手册</span>
+            <span>巡检制度</span>
+            <span>应急预案</span>
+            <span>服务手册</span>
+            <span>政策文件</span>
+            <span>历史案例</span>
+            <span>SLA 规则</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section access-section" id="steps">
+        <div class="section-heading">
+          <p class="eyebrow">一步一步怎样操作</p>
+          <h2>用 6 个阶段从试点闭环走向全域运营</h2>
+          <p>每一步都要有明确交付物，避免只完成页面展示，实际业务仍然靠人工转发。</p>
+        </div>
+
+        <div class="steps-principle">
+          <span>推进原则</span>
+          <p>
+            不要先做“大而全驾驶舱”，先用
+            <strong>安全事件 + 运维工单 + 知识问答</strong>
+            打通闭环，再把闭环数据汇总到运营指挥，最后扩展到物业、办公、招商，形成全域运营。
+          </p>
+        </div>
+
+        <div class="execution-timeline">
+          <article>
+            <span>第一阶段</span>
+            <h3>现状盘点</h3>
+            <b>第 1 个月</b>
+            <p>梳理既有系统、设备点位、数据接口、组织角色、事件类型、SLA 规则和知识文档，确认哪些系统先接、哪些点位先做。</p>
+            <em>输出：系统清单、点位清单、接口清单、流程清单、知识文档清单、首批场景范围。</em>
+          </article>
+          <article>
+            <span>第二阶段</span>
+            <h3>统一编码和事件池</h3>
+            <b>第 2 个月</b>
+            <p>统一楼栋、楼层、房间、设备、人员、车辆、事件和工单口径，让告警、报修、巡检都能进入同一个事件池。</p>
+            <em>输出：主数据模型、事件分类、责任部门、SLA 规则、统一事件池。</em>
+          </article>
+          <article>
+            <span>第三阶段</span>
+            <h3>第一个 MVP 闭环</h3>
+            <b>第 3-4 个月</b>
+            <p>优先选择消防通道占用、设备离线、门禁异常开门三个高频场景，跑通识别、派单、处置和回传。</p>
+            <em>输出：告警识别、证据关联、自动派单、现场回传、复盘沉淀。</em>
+          </article>
+          <article>
+            <span>第四阶段</span>
+            <h3>知识库和预案库</h3>
+            <b>第 4-5 个月</b>
+            <p>把设备说明书、运维制度、巡检要求和应急预案做成可检索、可调用的知识资产，并用处置回传持续补案例。</p>
+            <em>输出：运维知识库、应急预案库、标准问答、处置案例库。</em>
+          </article>
+          <article>
+            <span>第五阶段</span>
+            <h3>扩展物业与服务入口</h3>
+            <b>第 6-7 个月</b>
+            <p>在安全和运维闭环稳定后，统一访客预约、停车申请、物业报修、会议室预约、企业服务咨询和政策问答。</p>
+            <em>输出：统一服务入口、自然语言问答、转工单/转人工机制。</em>
+          </article>
+          <article>
+            <span>第六阶段</span>
+            <h3>运营指挥和自动报告</h3>
+            <b>第 8 个月起</b>
+            <p>把前面闭环产生的真实数据汇总到运营指挥，形成一屏态势、运营报告、风险趋势和重大活动复盘，再逐步接入招商经营。</p>
+            <em>输出：一屏态势、运营报告、风险趋势、管理建议、后续招商扩展清单。</em>
+          </article>
+        </div>
+      </section>
+
+      <section class="section workflow-section" id="mvp">
+        <div class="section-heading">
+          <p class="eyebrow">首个 MVP 闭环怎么跑</p>
+          <h2>把“消防通道占用”作为样板链路</h2>
+          <p>用一个真实可理解的园区事件，把视觉识别、事件池、责任规则、工单派发、现场处置、复盘沉淀和指挥统计全部串起来。</p>
+        </div>
+
+        <div class="mvp-example">
+          <div>
+            <span>样例事件</span>
+            <h3>A 座南侧消防通道被临停车辆占用</h3>
+            <p>工作日 10:18，消防通道摄像头识别到一辆白色车辆停留超过 3 分钟，遮挡消防车通行宽度。系统自动生成“消防通道占用”事件，并进入安保与物业协同处置流程。</p>
+          </div>
+          <ul>
+            <li><strong>触发点位</strong><span>A 座南侧消防通道摄像头 C-103</span></li>
+            <li><strong>责任部门</strong><span>安保巡逻岗主责，物业客服协同联系车主</span></li>
+            <li><strong>处置时限</strong><span>5 分钟内确认，15 分钟内清障，超时升级值班主管</span></li>
+          </ul>
+        </div>
+
+        <div class="mvp-flow">
+          <article>
+            <span>01</span>
+            <h3>事件触发</h3>
+            <p>摄像头持续识别消防通道画面，发现车辆停留超过阈值，自动截取现场图片和 15 秒视频片段。</p>
+            <b>输出：事件编号、点位、截图、视频证据。</b>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>AI 补齐字段</h3>
+            <p>系统识别事件类型为“消防通道占用”，补齐楼栋、区域、车牌、持续时长和紧急程度。</p>
+            <b>输出：A 座南侧、车辆占道、一般高优先级。</b>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>规则匹配</h3>
+            <p>规则库判断该区域由安保巡逻岗先到场确认，物业客服同步查询车主并电话提醒。</p>
+            <b>输出：主责安保，协同物业，SLA 15 分钟。</b>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>自动派单</h3>
+            <p>系统向最近巡逻岗推送处置工单，附带位置导航、现场截图、处置要求和升级条件。</p>
+            <b>输出：巡逻岗接单，物业客服收到协同通知。</b>
+          </article>
+          <article>
+            <span>05</span>
+            <h3>现场回传</h3>
+            <p>安保到场拍照确认，物业联系车主挪车；处理完成后上传清障照片、原因和耗时。</p>
+            <b>输出：已清障、用时 9 分钟、车主临停。</b>
+          </article>
+          <article>
+            <span>06</span>
+            <h3>复盘报告</h3>
+            <p>系统自动写入案例库，并在周报中统计占道次数、平均响应、超时情况和高发点位。</p>
+            <b>输出：案例沉淀、指标入库、优化建议。</b>
+          </article>
+        </div>
+      </section>
+
+      <section class="section module-section" id="target">
+        <div class="section-heading">
+          <p class="eyebrow">最终达到全域运营的目标</p>
+          <h2>形成一个入口、一个事件池、一套规则、一个指挥视图</h2>
+          <p>全域运营不是把所有系统堆在一起，而是让所有角色在统一机制下协同工作。</p>
+        </div>
+
+        <div class="target-grid">
+          <article><span>入口</span><h3>一个统一入口</h3><p>企业、员工、访客、管理人员都能咨询、报修、申请、预约和反馈。</p></article>
+          <article><span>事件</span><h3>一个统一事件池</h3><p>告警、报修、巡检、服务、审批和投诉都进入同一条运营链路。</p></article>
+          <article><span>规则</span><h3>一套责任规则</h3><p>统一责任部门、SLA、升级机制、预案流程和通知机制。</p></article>
+          <article><span>知识</span><h3>一个知识中枢</h3><p>制度、预案、手册、案例、合同、政策和服务资料统一沉淀。</p></article>
+          <article><span>指挥</span><h3>一个指挥视图</h3><p>管理层看安全、设备、服务、招商、能耗、工单和风险全局态势。</p></article>
+          <article><span>复盘</span><h3>一个复盘机制</h3><p>每个事件结束后都能沉淀为案例、指标和规则优化建议。</p></article>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div>
+          <p class="eyebrow">分阶段建设版本</p>
+          <h2>至少 8 个月形成全域运营底座</h2>
+          <p>先验证“感知-派单-处置-复盘-报告”闭环，再汇总到运营指挥，并复制到物业、办公、招商和经营场景。</p>
+        </div>
+        <a class="primary-button light" href="./index.html#contact">预约方案演示</a>
+      </section>
+    </main>
+
+    <button class="back-top" type="button" aria-label="返回顶部">↑</button>
+    <script src="./script.js"></script>
+  </body>
+</html>

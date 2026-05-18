@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>安全管理中心｜园区智能运营平台</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./safety-overrides.css" />
   </head>
   <body>
     <header class="site-header" aria-label="主导航">
@@ -26,7 +27,7 @@
         <div class="module-hero-copy">
           <a class="back-link" href="./index.html#scenes">← 返回业务场景应用层</a>
           <p class="eyebrow">应用模块 01</p>
-          <h1>安全管理中心</h1>
+          <h1><span>Safety Management Center</span>安全管理中心</h1>
           <p class="hero-lede">
             面向园区安保、消控、应急值守与管理层，把视频监控、门禁、访客、周界报警、停车系统和弱联网设备状态统一接入，形成一个可看、可判、可派单、可复盘的安防总平台。
           </p>
@@ -37,34 +38,101 @@
           </div>
         </div>
 
-        <div class="security-console" aria-label="安全管理中心态势看板">
-          <div class="console-header">
-            <span>安全态势总览</span>
-            <strong>当前风险等级：中</strong>
-          </div>
-          <div class="console-grid">
-            <div class="console-map">
-              <span class="risk-point point-a">周界</span>
-              <span class="risk-point point-b">门禁</span>
-              <span class="risk-point point-c">消防</span>
-              <span class="risk-point point-d">车辆</span>
+        <div class="security-console safety-cockpit-wrap" aria-label="智慧园区安防系统完整驾驶舱">
+          <div class="cockpit">
+            <div class="cockpit-topbar">
+              <span>2026-05-11&nbsp;&nbsp;12:00:00</span>
+              <strong>智慧园区安防系统</strong>
+              <span>20-28°C&nbsp;&nbsp;设备在线 98.6%</span>
             </div>
-            <div class="console-side">
-              <div>
-                <strong>98.6%</strong>
-                <span>设备在线率</span>
+            <div class="cockpit-tabs">
+              <span>园区态势</span>
+              <span>重点区域</span>
+              <span>安防抓拍</span>
+              <span>设备状态</span>
+            </div>
+
+            <div class="cockpit-main">
+              <aside class="hud-panel hud-left">
+                <h3>重点区域巡检</h3>
+                <div class="camera-list">
+                  <div><img src="./assets/security/camera-main-gate.png" alt=""><span>园区主入口</span><b>在线</b></div>
+                  <div><img src="./assets/security/camera-office-south.png" alt=""><span>办公楼南入口</span><b>在线</b></div>
+                  <div><img src="./assets/security/camera-parking-a.png" alt=""><span>A区停车场</span><b>在线</b></div>
+                </div>
+                <h3>本月风险事件</h3>
+                <div class="risk-bars">
+                  <label><span>周界入侵</span><i style="--w: 82%"></i><b>132</b></label>
+                  <label><span>通道占用</span><i style="--w: 64%"></i><b>98</b></label>
+                  <label><span>消防告警</span><i style="--w: 46%"></i><b>66</b></label>
+                  <label><span>异常停留</span><i style="--w: 38%"></i><b>52</b></label>
+                </div>
+              </aside>
+
+              <div class="campus-stage" aria-hidden="true">
+                <div class="aerial-map">
+                  <img src="./assets/security/security-cockpit-campus.png" alt="" />
+                  <span class="map-label l1">园区主大门</span>
+                  <span class="map-label l2">办公楼群入口</span>
+                  <span class="map-label l3">A区停车场</span>
+                  <span class="map-label l4">研发办公楼</span>
+                  <span class="map-camera cam-a"></span>
+                  <span class="map-camera cam-b"></span>
+                  <span class="map-camera cam-c"></span>
+                  <span class="map-camera cam-d"></span>
+                  <span class="map-pin pin-a">1</span>
+                  <span class="map-pin pin-b">2</span>
+                  <span class="map-pin pin-c">3</span>
+                  <span class="map-pin pin-d">4</span>
+                  <span class="map-status status-a">门禁正常</span>
+                  <span class="map-status status-b">消防联动</span>
+                  <span class="map-alert alert-a">周界告警</span>
+                  <span class="map-alert alert-b">异常停留</span>
+                </div>
               </div>
-              <div>
-                <strong>24</strong>
-                <span>今日告警</span>
-              </div>
-              <div>
-                <strong>4m</strong>
-                <span>平均响应</span>
-              </div>
+
+              <aside class="hud-panel hud-right">
+                <h3>本月事件类型</h3>
+                <div class="donut-chart"><span>348<small>件</small></span></div>
+                <div class="legend">
+                  <span><i class="c1"></i>门禁异常 <b>139</b></span>
+                  <span><i class="c2"></i>周界告警 <b>104</b></span>
+                  <span><i class="c3"></i>车辆事件 <b>42</b></span>
+                  <span><i class="c4"></i>消防隐患 <b>63</b></span>
+                </div>
+                <h3>告警趋势</h3>
+                <div class="trend-card">
+                  <svg viewBox="0 0 240 100" role="img" aria-label="告警趋势折线图">
+                    <line x1="8" y1="78" x2="232" y2="78" />
+                    <line x1="8" y1="52" x2="232" y2="52" />
+                    <line x1="8" y1="26" x2="232" y2="26" />
+                    <polyline points="8,76 48,62 88,66 128,38 168,52 208,28 232,42" />
+                    <g>
+                      <circle cx="8" cy="76" r="4" />
+                      <circle cx="48" cy="62" r="4" />
+                      <circle cx="88" cy="66" r="4" />
+                      <circle cx="128" cy="38" r="4" />
+                      <circle cx="168" cy="52" r="4" />
+                      <circle cx="208" cy="28" r="4" />
+                      <circle cx="232" cy="42" r="4" />
+                    </g>
+                    <text x="8" y="96">一周</text>
+                    <text x="88" y="96">三周</text>
+                    <text x="168" y="96">五周</text>
+                    <text x="214" y="96">本周</text>
+                  </svg>
+                </div>
+              </aside>
+            </div>
+
+            <div class="cockpit-dock">
+              <div><strong>98.6%</strong><span>设备在线率</span></div>
+              <div><strong>1,286</strong><span>视频点位</span></div>
+              <div><strong>12</strong><span>待协同工单</span></div>
+              <div><strong>4m</strong><span>平均响应</span></div>
             </div>
           </div>
-          <div class="console-events">
+          <div class="console-events cockpit-events">
             <p><b>09:42</b> A 区东侧周界出现异常停留，已联动最近摄像机。</p>
             <p><b>10:18</b> 3 号楼消防通道占用，已生成物业协同工单。</p>
             <p><b>11:06</b> 主入口访客证件校验异常，已通知岗亭复核。</p>
@@ -92,6 +160,7 @@
               <span>周界报警</span>
               <span>停车系统</span>
               <span>应急联动</span>
+              <span>设备纳管</span>
             </div>
           </div>
           <div class="capability-list">

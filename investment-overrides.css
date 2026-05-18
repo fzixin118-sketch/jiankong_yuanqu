@@ -1,0 +1,207 @@
+/* Investment page refinements. Loaded after the shared stylesheet. */
+#smart-attract .solution-layout {
+  grid-template-columns: minmax(620px, 1.3fr) minmax(360px, 0.7fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+#smart-attract .solution-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 26px;
+}
+
+#smart-attract .panel-title {
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+}
+
+#smart-attract .investment-flow {
+  flex: 1;
+  min-height: 280px;
+  padding: 16px 20px;
+}
+
+#smart-attract .investment-flow span {
+  min-height: 54px;
+  padding: 10px 12px;
+}
+
+#smart-attract .investment-flow strong {
+  min-height: 86px;
+}
+
+#smart-attract .capability-list {
+  gap: 12px;
+}
+
+#smart-attract .capability-list article {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 0 14px;
+  align-items: center;
+  padding: 18px 20px;
+}
+
+#smart-attract .capability-list span {
+  min-width: 46px;
+  height: 32px;
+  margin: 0;
+}
+
+#smart-attract .capability-list h3 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+#smart-attract .capability-list p {
+  grid-column: 1 / -1;
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+#enterprise-service .investment-card-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+}
+
+#enterprise-service .investment-card-grid .office-card {
+  min-height: 300px;
+  padding: 0 16px 16px;
+}
+
+#enterprise-service .investment-card-grid .office-card-visual {
+  height: 150px;
+  margin: 0 -16px 14px;
+}
+
+#enterprise-service .investment-card-grid .office-card-visual::before {
+  transform: translate(-50%, -50%) scale(0.58);
+}
+
+#enterprise-service .investment-card-grid .office-card-visual::after {
+  transform: translate(-50%, -50%) scale(0.58);
+}
+
+#enterprise-service .investment-card-grid .command-title-line {
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+#enterprise-service .investment-card-grid .command-title-line span {
+  flex: 0 0 auto;
+  min-width: 42px;
+  height: 30px;
+  padding: 0 9px;
+  font-size: 14px;
+}
+
+#enterprise-service .investment-card-grid .command-title-line h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+#enterprise-service .investment-card-grid .office-card p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#enterprise-service .investment-example {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.82fr) minmax(0, 1.18fr);
+  gap: 18px;
+  max-width: 1180px;
+  margin: 18px auto 0;
+  padding: 20px;
+  background:
+    linear-gradient(rgba(20, 103, 216, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 103, 216, 0.04) 1px, transparent 1px),
+    #ffffff;
+  background-size: 28px 28px, 28px 28px, auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(20, 56, 92, 0.08);
+}
+
+#enterprise-service .example-question {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 170px;
+  padding: 18px;
+  background: linear-gradient(135deg, rgba(20, 103, 216, 0.08), rgba(20, 169, 154, 0.1));
+  border: 1px solid rgba(20, 103, 216, 0.12);
+  border-radius: 8px;
+}
+
+#enterprise-service .example-question span {
+  width: fit-content;
+  padding: 7px 10px;
+  color: #ffffff;
+  background: var(--blue);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 850;
+}
+
+#enterprise-service .example-question h3 {
+  margin-top: 14px;
+  color: var(--ink);
+  font-size: 22px;
+  line-height: 1.35;
+}
+
+#enterprise-service .example-answer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+#enterprise-service .example-answer article {
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(20, 103, 216, 0.12);
+  border-radius: 8px;
+}
+
+#enterprise-service .example-answer strong {
+  display: block;
+  color: var(--blue-dark);
+  font-size: 17px;
+}
+
+#enterprise-service .example-answer p {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+@media (max-width: 1320px) {
+  #smart-attract .solution-layout {
+    grid-template-columns: 1fr;
+  }
+
+  #enterprise-service .investment-card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  #enterprise-service .investment-card-grid .office-card {
+    min-height: 330px;
+  }
+
+  #enterprise-service .investment-example,
+  #enterprise-service .example-answer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 820px) {
+  #enterprise-service .investment-card-grid {
+    grid-template-columns: 1fr;
+  }
+}

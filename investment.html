@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>招商与企业服务中心｜园区智能运营平台</title>
+    <title>招商中心｜园区智能运营平台</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./investment-overrides.css?v=compact-service-cards" />
   </head>
   <body>
     <header class="site-header" aria-label="主导航">
@@ -15,8 +16,7 @@
       <nav class="nav-links" aria-label="页面导航">
         <a href="./index.html#scenes">场景应用</a>
         <a href="#smart-attract">智慧招商</a>
-        <a href="#enterprise-service">企业服务</a>
-        <a href="#customer-service">智慧客服</a>
+        <a href="#enterprise-service">政策与企业服务</a>
       </nav>
       <a class="nav-action" href="./index.html#scenes">返回应用层</a>
     </header>
@@ -25,22 +25,21 @@
       <section class="module-hero investment-hero" id="overview">
         <div class="module-hero-copy">
           <a class="back-link" href="./index.html#scenes">← 返回业务场景应用层</a>
-          <p class="eyebrow">应用模块 08 · 招商与企业服务类</p>
-          <h1>招商与企业服务中心</h1>
+          <p class="eyebrow">应用模块 08 · 招商类</p>
+          <h1><span>Investment Center</span>招商中心</h1>
           <p class="hero-lede">
-            面向园区招商、企业服务、政策兑现和客服咨询，把企业画像、产业趋势、政策问答、入驻流程、审批事项和材料生成统一到一个智能服务入口。
+            面向园区招商团队，把企业画像、产业趋势、政策适配、载体资源和跟进建议统一到一个智能推荐入口，帮助快速发现适合入驻的目标企业。
           </p>
           <div class="hero-actions">
             <a class="primary-button" href="#smart-attract">智慧招商</a>
-            <a class="secondary-button" href="#enterprise-service">企业服务资源匹配</a>
-            <a class="secondary-button" href="#customer-service">AI 智慧客服</a>
+            <a class="secondary-button" href="#enterprise-service">招商政策与企业服务</a>
           </div>
         </div>
 
-        <div class="investment-console" aria-label="招商与企业服务中心智能看板">
+        <div class="investment-console" aria-label="招商中心智能看板">
           <div class="console-header">
-            <span>招商服务总览</span>
-            <strong>智能助手：在线接待</strong>
+            <span>招商线索总览</span>
+            <strong>推荐引擎：运行中</strong>
           </div>
           <div class="investment-console-grid">
             <div class="mini-program-panel" aria-label="园区微信小程序招商服务示意">
@@ -51,15 +50,15 @@
                   <i></i>
                 </div>
                 <div class="wechat-chat">
-                  <p class="bot-intro">您好，我是园区政策解答小助手。可以咨询入驻流程、产业扶持政策、资料清单和企业服务。</p>
+                  <p class="bot-intro">您好，我是招商线索助手。可以分析企业画像、产业适配、政策匹配和跟进优先级。</p>
                   <div class="hot-questions">
                     <b>热门问题</b>
-                    <span>我们是高成长的科创企业，租用孵化器有什么优惠？</span>
-                    <span>厂房数字化改造是否能申请专项补贴？</span>
-                    <span>入驻需要准备哪些资料？审批多久？</span>
+                    <span>低碳装备企业是否适合本园区？</span>
+                    <span>哪些企业近期有扩产和融资信号？</span>
+                    <span>推荐线索应该优先跟进谁？</span>
                   </div>
-                  <p class="user-bubble">我们想租绿色低碳楼宇，是否有支持政策？</p>
-                  <p class="bot-reply">已匹配绿色低碳发展、研发投入补贴和租金减免政策，可生成申请材料清单并预填入驻表单。</p>
+                  <p class="user-bubble">筛选适合引入的工业软件企业。</p>
+                  <p class="bot-reply">已结合行业趋势、融资动态和园区定位，推荐 12 家企业并生成跟进理由。</p>
                 </div>
                 <div class="chat-input">请输入问题...</div>
               </div>
@@ -71,18 +70,18 @@
               </div>
               <div>
                 <strong>7类</strong>
-                <span>企业服务能力</span>
+                <span>线索适配模型</span>
               </div>
               <div>
                 <strong>1键</strong>
-                <span>材料生成预填</span>
+                <span>跟进建议生成</span>
               </div>
             </div>
           </div>
           <div class="console-events">
             <p><b>09:18</b> AI 已根据产业方向推荐 12 家适合入驻企业，生成招商跟进名单。</p>
-            <p><b>10:42</b> 企业咨询“入驻流程”，已返回审批节点、材料清单和线上填报入口。</p>
-            <p><b>11:26</b> “停车、租赁、支付、服务、投诉”咨询自动分流至对应服务规则。</p>
+            <p><b>10:42</b> 低碳装备企业适配度 92%，已匹配可用载体和政策理由。</p>
+            <p><b>11:26</b> 工业软件成长企业新增融资信号，已加入本周重点跟进池。</p>
           </div>
         </div>
       </section>
@@ -224,62 +223,28 @@
             <p>自动生成资料草稿，复杂问题带上下文转给招商或企业服务人员。</p>
           </article>
         </div>
+        <div class="investment-example" aria-label="招商政策咨询示例">
+          <div class="example-question">
+            <span>咨询例子</span>
+            <h3>“我们是一家工业软件企业，想了解入驻园区能申请哪些政策？”</h3>
+          </div>
+          <div class="example-answer">
+            <article>
+              <strong>政策匹配</strong>
+              <p>可重点关注研发补贴、房租减免、人才服务和企业上云支持，系统同步列出申请条件。</p>
+            </article>
+            <article>
+              <strong>办理路径</strong>
+              <p>建议先提交营业执照、产品介绍、人员规模和用房需求，招商专员 1 个工作日内跟进。</p>
+            </article>
+            <article>
+              <strong>材料生成</strong>
+              <p>自动生成政策咨询纪要、材料清单和入驻申请表草稿，可一键转派企业服务人员。</p>
+            </article>
+          </div>
+        </div>
       </section>
 
-      <section class="section access-section" id="customer-service">
-        <div class="section-heading">
-          <p class="eyebrow">智慧客服</p>
-          <h2>AI 处理 90% 高频咨询，显著节省人工客服成本</h2>
-          <p>面向停车、租赁、支付、服务、投诉等高频场景，系统自动理解问题、匹配规则、生成答复、分派工单并沉淀服务数据。</p>
-        </div>
-        <div class="service-desk-layout investment-service-desk" aria-label="智慧客服高频咨询处理">
-          <div class="service-desk-copy">
-            <div class="panel-title">
-              <span>AI 智慧客服</span>
-              <strong>90% 咨询自动处理</strong>
-            </div>
-            <h3>企业、员工和访客都从同一个入口获得确定答复</h3>
-            <p>把高频规则、服务入口、费用说明和投诉流程沉淀为标准问答，减少人工重复解释；无法自动解决的问题再形成带摘要的工单转人工。</p>
-            <div class="service-chain-tags" aria-label="智慧客服覆盖咨询类型">
-              <span>停车</span>
-              <span>租赁</span>
-              <span>支付</span>
-              <span>服务</span>
-              <span>投诉</span>
-            </div>
-          </div>
-          <div class="customer-service-board">
-            <article>
-              <span>停车</span>
-              <strong>车位申请、临停缴费、访客停车</strong>
-            </article>
-            <article>
-              <span>租赁</span>
-              <strong>空间查询、合同续签、费用规则</strong>
-            </article>
-            <article>
-              <span>支付</span>
-              <strong>账单查询、缴费入口、发票说明</strong>
-            </article>
-            <article>
-              <span>服务</span>
-              <strong>报修、会议室、活动、公共资源</strong>
-            </article>
-            <article>
-              <span>投诉</span>
-              <strong>诉求登记、进度查询、回访评价</strong>
-            </article>
-          </div>
-        </div>
-        <div class="roadmap-panel">
-          <h3>客服降本闭环</h3>
-          <ol>
-            <li><strong>高频问题自动回答</strong><span>停车、租赁、支付、服务、投诉等问题直接返回标准答案和办理入口。</span></li>
-            <li><strong>复杂问题自动转派</strong><span>AI 总结企业诉求、提取关键信息、匹配责任部门，减少人工二次询问。</span></li>
-            <li><strong>服务数据持续优化</strong><span>统计问题类型、响应时长、满意度和未解决原因，反哺政策解释和服务规则。</span></li>
-          </ol>
-        </div>
-      </section>
     </main>
 
     <button class="back-top" type="button" aria-label="返回顶部">↑</button>
