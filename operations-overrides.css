@@ -1,0 +1,69 @@
+/* Operations page refinements. Loaded after the shared stylesheet. */
+#knowledge .solution-layout {
+  grid-template-columns: minmax(620px, 1.3fr) minmax(360px, 0.7fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+#knowledge .solution-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 26px;
+}
+
+#knowledge .panel-title {
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+}
+
+#knowledge .knowledge-flow {
+  flex: 1;
+  min-height: 280px;
+  padding: 16px 20px;
+}
+
+#knowledge .knowledge-flow span {
+  min-height: 54px;
+  padding: 10px 12px;
+}
+
+#knowledge .knowledge-flow strong {
+  min-height: 86px;
+}
+
+#knowledge .capability-list {
+  gap: 12px;
+}
+
+#knowledge .capability-list article {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 0 14px;
+  align-items: center;
+  padding: 18px 20px;
+}
+
+#knowledge .capability-list span {
+  min-width: 46px;
+  height: 32px;
+  margin: 0;
+}
+
+#knowledge .capability-list h3 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+#knowledge .capability-list p {
+  grid-column: 1 / -1;
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+@media (max-width: 1320px) {
+  #knowledge .solution-layout {
+    grid-template-columns: 1fr;
+  }
+}

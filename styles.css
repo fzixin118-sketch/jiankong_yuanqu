@@ -1759,6 +1759,13 @@ h1 {
   margin-bottom: 8px;
 }
 
+.implementation-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 26px;
+}
+
 .cta-section {
   display: flex;
   align-items: center;
@@ -4175,6 +4182,30 @@ h1 {
   border-radius: 50%;
 }
 
+.ticket-team-card .ops-card-visual {
+  aspect-ratio: 2 / 1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ticket-team-card .ops-card-visual::before,
+.ticket-team-card .ops-card-visual::after {
+  display: none;
+}
+
+.engineering-card .ops-card-visual {
+  background-image: url("./assets/operations-hvac-repair.png");
+}
+
+.security-team-card .ops-card-visual {
+  background-image: url("./assets/operations-fire-lane.png");
+}
+
+.cleaning-card .ops-card-visual {
+  background-image: url("./assets/operations-lobby-water.png");
+}
+
 .visitor-visual {
   background:
     linear-gradient(rgba(255, 255, 255, 0.26) 1px, transparent 1px),
@@ -4651,6 +4682,59 @@ h1 {
 
 .warning-card p {
   margin: 0;
+}
+
+.closed-loop-example {
+  margin-top: 18px;
+  padding: 16px;
+  background:
+    linear-gradient(135deg, rgba(232, 244, 255, 0.96), rgba(236, 250, 248, 0.88));
+  border: 1px solid rgba(190, 213, 234, 0.92);
+  border-radius: 8px;
+}
+
+.closed-loop-example strong {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--blue-dark);
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.closed-loop-example ol {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: loop-step;
+}
+
+.closed-loop-example li {
+  position: relative;
+  min-height: 26px;
+  padding-left: 34px;
+  color: #516276;
+  font-size: 13px;
+  line-height: 1.55;
+  counter-increment: loop-step;
+}
+
+.closed-loop-example li::before {
+  position: absolute;
+  left: 0;
+  top: 1px;
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+  content: counter(loop-step);
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--blue), var(--teal));
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 850;
 }
 
 .ops-audience-cards {
@@ -6119,6 +6203,1660 @@ h1 {
   }
 }
 
+/* Keep the six scenario modules in a 3 x 2 layout on presentation-sized screens. */
+#scenes .scene-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+#scenes .scene-card {
+  min-height: 340px;
+  padding: 156px 24px 24px;
+}
+
+#scenes .scene-card::before {
+  height: 126px;
+}
+
+#scenes .scene-card::after {
+  top: 74px;
+  left: 24px;
+  font-size: 15px;
+}
+
+#scenes .scene-icon {
+  top: 98px;
+  left: 24px;
+  width: 46px;
+  height: 46px;
+}
+
+#scenes .scene-card h3 {
+  margin-bottom: 12px;
+  font-size: 25px;
+  line-height: 1.18;
+}
+
+#scenes .scene-card p {
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+#scenes .scene-card p::before {
+  margin-bottom: 12px;
+}
+
+@media (max-width: 900px) {
+  #scenes .scene-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Architecture should read as a top-to-bottom platform stack. */
+#architecture .layer-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: none;
+  margin: 32px 0 0;
+}
+
+#architecture .layer-stack::before {
+  display: none;
+}
+
+#architecture .layer {
+  min-height: auto;
+  padding: 22px 28px;
+  border-left: 8px solid #0753a4;
+  background:
+    linear-gradient(90deg, rgba(7, 83, 164, 0.08), rgba(255, 255, 255, 0.96) 34%),
+    rgba(255, 255, 255, 0.94);
+  box-shadow: 0 12px 28px rgba(13, 63, 124, 0.08);
+}
+
+#architecture .layer-ai {
+  border-left-color: #0753a4;
+}
+
+#architecture .layer-data {
+  border-left-color: #0b75c9;
+}
+
+#architecture .layer-base {
+  border-left-color: #2492c6;
+}
+
+#architecture .layer-access {
+  border-left-color: #13a99b;
+}
+
+#architecture .layer-title {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 0.75fr) minmax(220px, 1fr);
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(196, 214, 230, 0.86);
+}
+
+#architecture .layer-title::before {
+  grid-row: 1;
+}
+
+#architecture .layer-title span {
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+#architecture .layer-title strong {
+  justify-self: end;
+  color: #0753a4;
+  font-size: 16px;
+}
+
+#architecture .capability-columns {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+#architecture .capability-columns div {
+  padding: 16px;
+}
+
+#architecture .capability-columns h3 {
+  font-size: 17px;
+}
+
+#architecture .capability-columns li,
+#architecture .tag-row span,
+#architecture .device-strip span {
+  min-height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+@media (max-width: 820px) {
+  #architecture .layer-title {
+    grid-template-columns: 46px 1fr;
+  }
+
+  #architecture .layer-title strong {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  #architecture .capability-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Absolute final hero treatment: keep image full-bleed and copy readable. */
+.hero::before {
+  height: 76%;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 0 48%, rgba(230, 238, 249, 0.12) 60%, rgba(255, 255, 255, 0.46) 78%, #ffffff 100%),
+    linear-gradient(90deg, rgba(5, 62, 140, 0.98) 0%, rgba(5, 72, 150, 0.78) 36%, rgba(5, 72, 150, 0.38) 68%, rgba(5, 72, 150, 0.14) 100%),
+    url("./assets/security/security-cockpit-campus.png") center center / cover no-repeat,
+    linear-gradient(135deg, #0b4d9f, #0a68bd);
+}
+
+.hero::after {
+  inset: auto 0 176px;
+  height: 320px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(235, 241, 250, 0.1) 22%, rgba(255, 255, 255, 0.42) 56%, rgba(255, 255, 255, 0.86) 82%, #ffffff 100%);
+  filter: blur(14px);
+}
+
+.hero-lede {
+  position: relative;
+  z-index: 5;
+  color: rgba(255, 255, 255, 0.96);
+  text-shadow: 0 2px 10px rgba(0, 28, 74, 0.54), 0 0 18px rgba(0, 28, 74, 0.28);
+}
+
+@media (max-width: 820px) {
+  .hero::before {
+    height: 100%;
+    background:
+      linear-gradient(180deg, rgba(7, 68, 143, 0.88), rgba(7, 68, 143, 0.52) 58%, rgba(255, 255, 255, 0.72) 100%),
+      url("./assets/security/security-cockpit-campus.png") center / cover no-repeat;
+  }
+}
+
+/* Final safety cockpit fit: keep every HUD label, chart, and metric visible. */
+.safety-hero .safety-cockpit-wrap {
+  max-width: 840px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit {
+  aspect-ratio: 16 / 10 !important;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-topbar {
+  height: 44px;
+  padding: 0 18px;
+  font-size: 12px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-topbar strong {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-tabs {
+  height: 31px;
+  gap: 22px;
+  font-size: 12px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-tabs span {
+  padding-top: 6px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-main {
+  height: calc(100% - 125px);
+  min-height: 0;
+  padding: 10px 14px 0;
+}
+
+.safety-hero .safety-cockpit-wrap .campus-stage {
+  inset: 10px 14px 0;
+}
+
+.safety-hero .safety-cockpit-wrap .hud-panel {
+  top: 12px;
+  bottom: 10px;
+  width: 238px;
+  padding: 12px;
+}
+
+.safety-hero .safety-cockpit-wrap .hud-left {
+  left: 14px;
+}
+
+.safety-hero .safety-cockpit-wrap .hud-right {
+  right: 14px;
+}
+
+.safety-hero .safety-cockpit-wrap .hud-panel h3 {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.1;
+}
+
+.safety-hero .safety-cockpit-wrap .camera-list {
+  gap: 7px;
+  margin-bottom: 12px;
+}
+
+.safety-hero .safety-cockpit-wrap .camera-list div {
+  grid-template-columns: 50px minmax(76px, 1fr) 28px;
+  gap: 7px;
+  min-height: 38px;
+  font-size: 11px;
+}
+
+.safety-hero .safety-cockpit-wrap .camera-list img {
+  width: 50px;
+  height: 31px;
+}
+
+.safety-hero .safety-cockpit-wrap .camera-list span {
+  white-space: nowrap;
+}
+
+.safety-hero .safety-cockpit-wrap .camera-list b {
+  min-width: 28px;
+  font-size: 11px;
+}
+
+.safety-hero .safety-cockpit-wrap .risk-bars {
+  gap: 7px;
+}
+
+.safety-hero .safety-cockpit-wrap .risk-bars label {
+  grid-template-columns: 58px 1fr 26px;
+  gap: 6px;
+  font-size: 11px;
+}
+
+.safety-hero .safety-cockpit-wrap .risk-bars b {
+  font-size: 11px;
+}
+
+.safety-hero .safety-cockpit-wrap .donut-chart {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 7px;
+}
+
+.safety-hero .safety-cockpit-wrap .donut-chart::after {
+  left: 23px;
+  top: 23px;
+  width: 38px;
+  height: 38px;
+}
+
+.safety-hero .safety-cockpit-wrap .donut-chart span {
+  font-size: 15px;
+}
+
+.safety-hero .safety-cockpit-wrap .donut-chart small {
+  font-size: 8px;
+}
+
+.safety-hero .safety-cockpit-wrap .legend {
+  gap: 5px 7px;
+  margin-bottom: 9px;
+  font-size: 10px;
+}
+
+.safety-hero .safety-cockpit-wrap .legend span {
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.safety-hero .safety-cockpit-wrap .trend-card {
+  height: 58px;
+  padding: 6px;
+}
+
+.safety-hero .safety-cockpit-wrap .trend-card polyline {
+  stroke-width: 3;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-dock {
+  height: 50px;
+  gap: 10px;
+  padding: 6px 14px 8px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-dock div {
+  min-height: 36px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-dock strong {
+  font-size: 20px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-dock span {
+  margin-top: 2px;
+  font-size: 10px;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+/* Final safety cockpit fit: keep every HUD label, chart, and metric visible. */
+.safety-hero .safety-cockpit-wrap {
+  max-width: 840px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit {
+  aspect-ratio: 16 / 10 !important;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-topbar {
+  height: 44px;
+  padding: 0 18px;
+  font-size: 12px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-topbar strong {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-tabs {
+  height: 31px;
+  gap: 22px;
+  font-size: 12px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-tabs span {
+  padding-top: 6px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-main {
+  height: calc(100% - 125px);
+  min-height: 0;
+  padding: 10px 14px 0;
+}
+
+.safety-hero .safety-cockpit-wrap .campus-stage {
+  inset: 10px 14px 0;
+}
+
+.safety-hero .safety-cockpit-wrap .hud-panel {
+  top: 12px;
+  bottom: 10px;
+  width: 238px;
+  padding: 12px;
+}
+
+.safety-hero .safety-cockpit-wrap .hud-left {
+  left: 14px;
+}
+
+.safety-hero .safety-cockpit-wrap .hud-right {
+  right: 14px;
+}
+
+.safety-hero .safety-cockpit-wrap .hud-panel h3 {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.1;
+}
+
+.safety-hero .safety-cockpit-wrap .camera-list {
+  gap: 7px;
+  margin-bottom: 12px;
+}
+
+.safety-hero .safety-cockpit-wrap .camera-list div {
+  grid-template-columns: 50px minmax(76px, 1fr) 28px;
+  gap: 7px;
+  min-height: 38px;
+  font-size: 11px;
+}
+
+.safety-hero .safety-cockpit-wrap .camera-list img {
+  width: 50px;
+  height: 31px;
+}
+
+.safety-hero .safety-cockpit-wrap .camera-list span {
+  white-space: nowrap;
+}
+
+.safety-hero .safety-cockpit-wrap .camera-list b {
+  min-width: 28px;
+  font-size: 11px;
+}
+
+.safety-hero .safety-cockpit-wrap .risk-bars {
+  gap: 7px;
+}
+
+.safety-hero .safety-cockpit-wrap .risk-bars label {
+  grid-template-columns: 58px 1fr 26px;
+  gap: 6px;
+  font-size: 11px;
+}
+
+.safety-hero .safety-cockpit-wrap .risk-bars b {
+  font-size: 11px;
+}
+
+.safety-hero .safety-cockpit-wrap .donut-chart {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 7px;
+}
+
+.safety-hero .safety-cockpit-wrap .donut-chart::after {
+  left: 23px;
+  top: 23px;
+  width: 38px;
+  height: 38px;
+}
+
+.safety-hero .safety-cockpit-wrap .donut-chart span {
+  font-size: 15px;
+}
+
+.safety-hero .safety-cockpit-wrap .donut-chart small {
+  font-size: 8px;
+}
+
+.safety-hero .safety-cockpit-wrap .legend {
+  gap: 5px 7px;
+  margin-bottom: 9px;
+  font-size: 10px;
+}
+
+.safety-hero .safety-cockpit-wrap .legend span {
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.safety-hero .safety-cockpit-wrap .trend-card {
+  height: 58px;
+  padding: 6px;
+}
+
+.safety-hero .safety-cockpit-wrap .trend-card polyline {
+  stroke-width: 3;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-dock {
+  height: 50px;
+  gap: 10px;
+  padding: 6px 14px 8px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-dock div {
+  min-height: 36px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-dock strong {
+  font-size: 20px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-dock span {
+  margin-top: 2px;
+  font-size: 10px;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+/* Fit every cockpit detail inside the safety hero preview. */
+.safety-hero .safety-cockpit-wrap {
+  max-width: 840px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit {
+  aspect-ratio: 16 / 10;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-topbar {
+  height: 44px;
+  padding: 0 18px;
+  font-size: 12px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-topbar strong {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-tabs {
+  height: 31px;
+  gap: 22px;
+  font-size: 12px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-tabs span {
+  padding-top: 6px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-main {
+  height: calc(100% - 125px);
+  min-height: 0;
+  padding: 10px 14px 0;
+}
+
+.safety-hero .safety-cockpit-wrap .campus-stage {
+  inset: 10px 14px 0;
+}
+
+.safety-hero .safety-cockpit-wrap .hud-panel {
+  top: 12px;
+  bottom: 10px;
+  width: 238px;
+  padding: 12px;
+}
+
+.safety-hero .safety-cockpit-wrap .hud-left {
+  left: 14px;
+}
+
+.safety-hero .safety-cockpit-wrap .hud-right {
+  right: 14px;
+}
+
+.safety-hero .safety-cockpit-wrap .hud-panel h3 {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.1;
+}
+
+.safety-hero .safety-cockpit-wrap .camera-list {
+  gap: 7px;
+  margin-bottom: 12px;
+}
+
+.safety-hero .safety-cockpit-wrap .camera-list div {
+  grid-template-columns: 50px minmax(76px, 1fr) 28px;
+  gap: 7px;
+  min-height: 38px;
+  font-size: 11px;
+}
+
+.safety-hero .safety-cockpit-wrap .camera-list img {
+  width: 50px;
+  height: 31px;
+}
+
+.safety-hero .safety-cockpit-wrap .camera-list span {
+  white-space: nowrap;
+}
+
+.safety-hero .safety-cockpit-wrap .camera-list b {
+  min-width: 28px;
+  font-size: 11px;
+}
+
+.safety-hero .safety-cockpit-wrap .risk-bars {
+  gap: 7px;
+}
+
+.safety-hero .safety-cockpit-wrap .risk-bars label {
+  grid-template-columns: 58px 1fr 26px;
+  gap: 6px;
+  font-size: 11px;
+}
+
+.safety-hero .safety-cockpit-wrap .risk-bars b {
+  font-size: 11px;
+}
+
+.safety-hero .safety-cockpit-wrap .donut-chart {
+  width: 84px;
+  height: 84px;
+  margin-bottom: 7px;
+}
+
+.safety-hero .safety-cockpit-wrap .donut-chart::after {
+  left: 23px;
+  top: 23px;
+  width: 38px;
+  height: 38px;
+}
+
+.safety-hero .safety-cockpit-wrap .donut-chart span {
+  font-size: 15px;
+}
+
+.safety-hero .safety-cockpit-wrap .donut-chart small {
+  font-size: 8px;
+}
+
+.safety-hero .safety-cockpit-wrap .legend {
+  gap: 5px 7px;
+  margin-bottom: 9px;
+  font-size: 10px;
+}
+
+.safety-hero .safety-cockpit-wrap .legend span {
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.safety-hero .safety-cockpit-wrap .trend-card {
+  height: 58px;
+  padding: 6px;
+}
+
+.safety-hero .safety-cockpit-wrap .trend-card polyline {
+  stroke-width: 3;
+}
+
+.safety-hero .safety-cockpit-wrap .trend-card circle {
+  r: 3;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-dock {
+  height: 50px;
+  gap: 10px;
+  padding: 6px 14px 8px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-dock div {
+  min-height: 36px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-dock strong {
+  font-size: 20px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-dock span {
+  margin-top: 2px;
+  font-size: 10px;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+/* Compact the AI assistant panels into 2 x 2 module groups. */
+#architecture .layer-ai {
+  padding: 18px 24px;
+}
+
+#architecture .layer-ai .layer-title {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+}
+
+#architecture .layer-ai .capability-columns {
+  gap: 14px;
+}
+
+#architecture .layer-ai .capability-columns div {
+  padding: 14px 16px 16px;
+}
+
+#architecture .layer-ai .capability-columns h3 {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+#architecture .layer-ai .capability-columns ul {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+#architecture .layer-ai .capability-columns li {
+  min-height: 40px;
+  padding: 7px 10px;
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+@media (max-width: 820px) {
+  #architecture .layer-ai .capability-columns ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Final safety hero adjustment: restore event list and reduce top whitespace. */
+.module-hero.safety-hero {
+  padding-top: 58px;
+}
+
+.safety-hero .module-hero-copy::before {
+  margin-bottom: 52px;
+}
+
+.safety-hero .safety-cockpit-wrap {
+  display: flex;
+  flex-direction: column;
+  max-width: 820px;
+  background:
+    linear-gradient(135deg, rgba(5, 20, 44, 0.98), rgba(7, 43, 76, 0.94)),
+    #071b35;
+  border: 1px solid rgba(98, 211, 255, 0.42);
+  border-radius: 10px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit {
+  flex: 0 0 auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-events {
+  display: grid;
+  gap: 10px;
+  padding: 14px 20px 20px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-events p {
+  margin: 0;
+  padding: 12px 14px;
+  color: rgba(223, 247, 255, 0.82);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(98, 211, 255, 0.16);
+  border-radius: 8px;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-events b {
+  color: #8fffd4;
+  margin-right: 8px;
+}
+
+@media (max-width: 1320px) {
+  .module-hero.safety-hero {
+    padding-top: 52px;
+  }
+}
+
+/* Safety hero: use the full existing security cockpit without dropping details. */
+.safety-hero .safety-cockpit-wrap {
+  max-width: 820px;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 30px 80px rgba(6, 41, 78, 0.28);
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit {
+  position: relative;
+  inset: auto;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  color: #d9f2ff;
+  background:
+    linear-gradient(90deg, rgba(5, 18, 42, 0.9), rgba(7, 31, 68, 0.5) 24%, rgba(7, 31, 68, 0.5) 76%, rgba(5, 18, 42, 0.92)),
+    radial-gradient(circle at 52% 38%, rgba(79, 191, 255, 0.32), transparent 28%),
+    linear-gradient(180deg, #061225 0%, #0a1f3c 56%, #061225 100%);
+  border: 1px solid rgba(68, 183, 255, 0.55);
+  border-radius: 10px;
+  box-shadow: 0 24px 70px rgba(7, 31, 68, 0.28), inset 0 0 46px rgba(54, 170, 255, 0.24);
+  transform: none;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit > * {
+  display: revert;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit::before {
+  z-index: 2;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(74, 198, 255, 0.26), transparent 10% 90%, rgba(74, 198, 255, 0.26)),
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: auto, 100% 4px;
+  border-radius: 0;
+  filter: none;
+  mask-image: none;
+  opacity: 1;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit::after {
+  z-index: 2;
+  inset: 10px;
+  width: auto;
+  height: auto;
+  background: transparent;
+  border: 1px solid rgba(83, 193, 255, 0.28);
+  border-radius: 8px;
+  box-shadow: inset 0 0 28px rgba(83, 193, 255, 0.16);
+  filter: none;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-topbar {
+  display: grid;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-tabs {
+  display: flex;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-main,
+.safety-hero .safety-cockpit-wrap .campus-stage,
+.safety-hero .safety-cockpit-wrap .aerial-map,
+.safety-hero .safety-cockpit-wrap .hud-panel {
+  display: block;
+}
+
+.safety-hero .safety-cockpit-wrap .cockpit-dock {
+  display: grid;
+}
+
+.safety-hero .safety-cockpit-wrap :is(.camera-list, .risk-bars, .legend) {
+  display: grid;
+}
+
+.safety-hero .safety-cockpit-wrap .camera-list div {
+  display: grid;
+}
+
+.safety-hero .safety-cockpit-wrap .trend-card svg {
+  display: block;
+}
+
+/* Safety command overview: wider access map, narrower explanation column. */
+#command .solution-layout {
+  grid-template-columns: minmax(0, 1.22fr) minmax(360px, 0.78fr);
+  gap: 20px;
+}
+
+#command .solution-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px;
+}
+
+#command .solution-panel .panel-title {
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+}
+
+#command .platform-flow {
+  flex: 1;
+  min-height: 360px;
+  align-content: center;
+  gap: 14px;
+  padding: 18px;
+}
+
+#command .platform-flow::before {
+  inset: 15% 18%;
+}
+
+#command .platform-flow span,
+#command .platform-flow strong {
+  min-height: 58px;
+}
+
+#command .platform-flow strong {
+  min-height: 92px;
+}
+
+#command .capability-list article {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 10px 14px;
+  align-items: center;
+  padding: 18px 20px;
+}
+
+#command .capability-list span {
+  margin-bottom: 0;
+}
+
+#command .capability-list h3 {
+  margin-bottom: 0;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+#command .capability-list p {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+@media (max-width: 1320px) {
+  #command .solution-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Safety command scenes: fit six visual cards in one row. */
+#command .command-scene-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  max-width: none;
+}
+
+#command .command-card {
+  min-height: 360px;
+  padding: 0 12px 18px;
+}
+
+#command .command-visual {
+  aspect-ratio: 1 / 1;
+  margin: 0 -12px 14px;
+}
+
+#command .command-title-line {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#command .command-title-line span {
+  min-width: 0;
+  height: 30px;
+  padding: 0 9px;
+  font-size: 13px;
+}
+
+#command .command-title-line h3 {
+  min-width: 0;
+  font-size: 17px;
+  line-height: 1.22;
+}
+
+#command .command-card p {
+  color: #526378;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+@media (max-width: 1320px) {
+  #command .command-scene-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  #command .command-scene-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Safety warning cards: keep all six device-warning scenes on one row. */
+#warning .warning-cards {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  max-width: none;
+}
+
+#warning .warning-cards .warning-card {
+  min-height: 360px;
+  padding: 0 14px 18px;
+}
+
+#warning .warning-visual {
+  aspect-ratio: 1 / 1.08;
+  margin: 0 -14px 14px;
+  background-size: 300% 200%;
+}
+
+#warning .warning-card .command-title-line {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#warning .warning-card .command-title-line span {
+  padding: 5px 9px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1;
+}
+
+#warning .warning-card .command-title-line h3 {
+  min-width: 0;
+  font-size: 17px;
+  line-height: 1.22;
+}
+
+#warning .warning-card p {
+  color: #526378;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+@media (max-width: 1320px) {
+  #warning .warning-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  #warning .warning-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Unified secondary module covers: match the Safety Center PPT-style first screen. */
+.module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero) {
+  position: relative;
+  display: grid;
+  width: min(var(--ppt-canvas), calc(100% - var(--ppt-side-gap)));
+  min-height: var(--ppt-slide-height);
+  margin: 0 auto 48px;
+  padding: 70px var(--ppt-section-pad) var(--ppt-section-pad);
+  overflow: hidden;
+  grid-template-columns: minmax(410px, 0.78fr) minmax(0, 1.22fr);
+  gap: 54px;
+  align-items: center;
+  background:
+    radial-gradient(circle at 82% 32%, rgba(18, 168, 155, 0.16), transparent 28%),
+    linear-gradient(120deg, #f2f9ff 0%, #ffffff 42%, #eefaf7 100%);
+  box-shadow: 0 34px 70px rgba(0, 0, 0, 0.22);
+}
+
+.module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero)::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(23, 104, 216, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 104, 216, 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.72) 52%, transparent 100%);
+}
+
+.module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero)::after {
+  position: absolute;
+  top: 44px;
+  right: 70px;
+  z-index: 1;
+  content: "云极洲 PPT Design";
+  color: rgba(18, 32, 49, 0.48);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero) .module-hero-copy {
+  position: static;
+  z-index: 2;
+  align-self: center;
+}
+
+.module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero) .module-hero-copy::before {
+  display: block;
+  margin-bottom: 72px;
+  content: "云极洲 SMART CAMPUS";
+  color: #0753a4;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero) .back-link {
+  margin-bottom: 22px;
+  color: #0753a4;
+  font-size: 15px;
+  font-weight: 850;
+}
+
+.module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero) .eyebrow {
+  margin-bottom: 20px;
+  color: #0da99c;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero) .module-hero-copy h1 {
+  max-width: 660px;
+  margin-bottom: 24px;
+  color: #101d2d;
+  font-size: 54px;
+  line-height: 1.08;
+  font-weight: 950;
+  letter-spacing: 0;
+}
+
+.module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero) .module-hero-copy h1::before {
+  display: none;
+}
+
+.module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero) .module-hero-copy h1 span {
+  display: block;
+  margin-bottom: 14px;
+  color: #101d2d;
+  font-size: 44px;
+  line-height: 1.06;
+  font-weight: 950;
+}
+
+.module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero) .hero-lede {
+  max-width: 620px;
+  color: #607083;
+  font-size: 18px;
+  font-weight: 650;
+  line-height: 1.85;
+  text-shadow: none;
+}
+
+.module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero) .hero-actions {
+  position: absolute;
+  left: 70px;
+  bottom: 50px;
+  z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 560px;
+  gap: 14px 18px;
+}
+
+.module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero) .hero-actions .primary-button,
+.module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero) .hero-actions .secondary-button {
+  min-width: 178px;
+  min-height: 46px;
+  padding: 0 24px;
+  border-radius: 999px;
+  font-size: 15px;
+}
+
+.module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero) :is(.security-console, .ops-console, .property-console, .office-console, .investment-console, .command-console) {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 760px;
+  justify-self: end;
+  align-self: center;
+  border-radius: 8px;
+  box-shadow: 0 30px 80px rgba(6, 41, 78, 0.28);
+}
+
+.module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero) :is(.console-grid, .ops-console-grid, .property-console-grid, .office-console-grid, .investment-console-grid, .command-console-grid) {
+  grid-template-columns: minmax(0, 1fr) 170px;
+  gap: 18px;
+}
+
+@media (max-width: 1320px) {
+  .module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero) {
+    width: min(var(--ppt-canvas), calc(100% - 44px));
+    grid-template-columns: 1fr;
+  }
+
+  .module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero) .hero-actions {
+    position: static;
+    margin-top: 28px;
+  }
+
+  .module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero) :is(.security-console, .ops-console, .property-console, .office-console, .investment-console, .command-console) {
+    justify-self: stretch;
+    max-width: none;
+  }
+}
+
+@media (max-width: 820px) {
+  .module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero) {
+    width: calc(100% - 24px);
+    min-height: auto;
+    margin-bottom: 24px;
+    padding: 42px 26px;
+  }
+
+  .module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero)::after {
+    top: 24px;
+    right: 26px;
+  }
+
+  .module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero) .module-hero-copy::before {
+    margin-bottom: 36px;
+  }
+
+  .module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero) .module-hero-copy h1,
+  .module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero) .module-hero-copy h1 span {
+    font-size: 34px;
+  }
+
+  .module-hero:is(.safety-hero, .operations-hero, .property-hero, .office-hero, .investment-hero, .command-hero) :is(.console-grid, .ops-console-grid, .property-console-grid, .office-console-grid, .investment-console-grid, .command-console-grid) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Secondary page hero: align Safety page with the primary PPT cover style. */
+.module-hero.safety-hero {
+  position: relative;
+  width: min(var(--ppt-canvas), calc(100% - var(--ppt-side-gap)));
+  min-height: var(--ppt-slide-height);
+  margin: 0 auto 48px;
+  padding: 70px var(--ppt-section-pad) var(--ppt-section-pad);
+  overflow: hidden;
+  grid-template-columns: minmax(410px, 0.78fr) minmax(0, 1.22fr);
+  gap: 54px;
+  background:
+    radial-gradient(circle at 82% 32%, rgba(18, 168, 155, 0.16), transparent 28%),
+    linear-gradient(120deg, #f2f9ff 0%, #ffffff 42%, #eefaf7 100%);
+  box-shadow: 0 34px 70px rgba(0, 0, 0, 0.22);
+}
+
+.module-hero.safety-hero::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(23, 104, 216, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 104, 216, 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.72) 52%, transparent 100%);
+}
+
+.module-hero.safety-hero::after {
+  position: absolute;
+  top: 44px;
+  right: 70px;
+  z-index: 1;
+  content: "云极洲 PPT Design";
+  color: rgba(18, 32, 49, 0.48);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.safety-hero .module-hero-copy,
+.safety-hero .security-console {
+  position: relative;
+  z-index: 2;
+}
+
+.safety-hero .module-hero-copy::before {
+  display: block;
+  margin-bottom: 72px;
+  content: "云极洲 SMART CAMPUS";
+  color: #0753a4;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.safety-hero .back-link {
+  margin-bottom: 22px;
+  color: #0753a4;
+  font-size: 15px;
+}
+
+.safety-hero .eyebrow {
+  margin-bottom: 20px;
+  color: #0da99c;
+  font-size: 18px;
+}
+
+.safety-hero .module-hero-copy h1 {
+  max-width: 620px;
+  margin-bottom: 24px;
+  color: #101d2d;
+  font-size: 54px;
+  line-height: 1.08;
+  font-weight: 950;
+}
+
+.safety-hero .module-hero-copy h1::before {
+  display: block;
+  margin-bottom: 14px;
+  content: attr(data-en);
+  color: #101d2d;
+  font-size: 44px;
+  line-height: 1.06;
+  font-weight: 950;
+}
+
+.safety-hero .hero-lede {
+  max-width: 610px;
+  color: #607083;
+  font-size: 18px;
+  font-weight: 650;
+  line-height: 1.85;
+  text-shadow: none;
+}
+
+.safety-hero .hero-actions {
+  position: absolute;
+  left: 70px;
+  bottom: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 520px;
+  gap: 14px 18px;
+}
+
+.safety-hero .hero-actions .primary-button,
+.safety-hero .hero-actions .secondary-button {
+  min-width: 178px;
+  min-height: 46px;
+  padding: 0 24px;
+  border-radius: 999px;
+  font-size: 15px;
+}
+
+.safety-hero .security-console {
+  align-self: center;
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(5, 20, 44, 0.98), rgba(7, 43, 76, 0.94)),
+    #071b35;
+  box-shadow: 0 30px 80px rgba(6, 41, 78, 0.28);
+}
+
+.safety-hero .console-map {
+  min-height: 360px;
+}
+
+@media (max-width: 1320px) {
+  .module-hero.safety-hero {
+    width: min(var(--ppt-canvas), calc(100% - 44px));
+    grid-template-columns: 1fr;
+  }
+
+  .safety-hero .hero-actions {
+    position: static;
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 820px) {
+  .module-hero.safety-hero {
+    width: calc(100% - 24px);
+    min-height: auto;
+    padding: 42px 26px;
+    margin-bottom: 24px;
+  }
+
+  .safety-hero .module-hero-copy::before {
+    margin-bottom: 36px;
+  }
+
+  .safety-hero .module-hero-copy h1,
+  .safety-hero .module-hero-copy h1::before {
+    font-size: 34px;
+  }
+}
+
+/* Safety hero final alignment: visible bilingual heading and non-overlapping actions. */
+.safety-hero .module-hero-copy {
+  position: static;
+}
+
+.safety-hero .module-hero-copy h1::before {
+  display: none;
+}
+
+.safety-hero .module-hero-copy h1 span {
+  display: block;
+  margin-bottom: 14px;
+  color: #101d2d;
+  font-size: 44px;
+  line-height: 1.06;
+  font-weight: 950;
+}
+
+.safety-hero .hero-actions {
+  position: absolute;
+  left: 70px;
+  bottom: 70px;
+  z-index: 3;
+}
+
+@media (max-width: 1320px) {
+  .safety-hero .hero-actions {
+    position: static;
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 820px) {
+  .safety-hero .module-hero-copy h1 span {
+    font-size: 34px;
+  }
+}
+
+/* Remove the old footer slogan and rebalance the hero bottom strip. */
+.hero-metrics::after {
+  display: none;
+  content: none;
+}
+
+.hero-metrics:not(.status-buttons) {
+  grid-template-columns: 1.2fr repeat(3, minmax(0, 1fr));
+  align-items: center;
+}
+
+/* Absolute final hero treatment: keep image full-bleed and copy readable. */
+.hero::before {
+  height: 76%;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 0 48%, rgba(230, 238, 249, 0.12) 60%, rgba(255, 255, 255, 0.46) 78%, #ffffff 100%),
+    linear-gradient(90deg, rgba(5, 62, 140, 0.98) 0%, rgba(5, 72, 150, 0.78) 36%, rgba(5, 72, 150, 0.38) 68%, rgba(5, 72, 150, 0.14) 100%),
+    url("./assets/security/security-cockpit-campus.png") center center / cover no-repeat,
+    linear-gradient(135deg, #0b4d9f, #0a68bd);
+}
+
+.hero::after {
+  inset: auto 0 176px;
+  height: 320px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(235, 241, 250, 0.1) 22%, rgba(255, 255, 255, 0.42) 56%, rgba(255, 255, 255, 0.86) 82%, #ffffff 100%);
+  filter: blur(14px);
+}
+
+.hero-lede {
+  position: relative;
+  z-index: 5;
+  color: rgba(255, 255, 255, 0.96);
+  text-shadow: 0 2px 10px rgba(0, 28, 74, 0.54), 0 0 18px rgba(0, 28, 74, 0.28);
+}
+
+@media (max-width: 820px) {
+  .hero::before {
+    height: 100%;
+    background:
+      linear-gradient(180deg, rgba(7, 68, 143, 0.88), rgba(7, 68, 143, 0.52) 58%, rgba(255, 255, 255, 0.72) 100%),
+      url("./assets/security/security-cockpit-campus.png") center / cover no-repeat;
+  }
+}
+
+/* Final hero image treatment: full-bleed image with a slower blue-to-white mist. */
+.hero::before {
+  height: 76%;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 0 48%, rgba(230, 238, 249, 0.12) 60%, rgba(255, 255, 255, 0.46) 78%, #ffffff 100%),
+    linear-gradient(90deg, rgba(5, 62, 140, 0.98) 0%, rgba(5, 72, 150, 0.78) 36%, rgba(5, 72, 150, 0.38) 68%, rgba(5, 72, 150, 0.14) 100%),
+    url("./assets/security/security-cockpit-campus.png") center center / cover no-repeat,
+    linear-gradient(135deg, #0b4d9f, #0a68bd);
+}
+
+.hero::after {
+  inset: auto 0 176px;
+  height: 320px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(235, 241, 250, 0.1) 22%, rgba(255, 255, 255, 0.42) 56%, rgba(255, 255, 255, 0.86) 82%, #ffffff 100%);
+  filter: blur(14px);
+}
+
+.hero-lede {
+  position: relative;
+  z-index: 5;
+  color: rgba(255, 255, 255, 0.96);
+  text-shadow: 0 2px 10px rgba(0, 28, 74, 0.54), 0 0 18px rgba(0, 28, 74, 0.28);
+}
+
+@media (max-width: 820px) {
+  .hero::before {
+    height: 100%;
+    background:
+      linear-gradient(180deg, rgba(7, 68, 143, 0.88), rgba(7, 68, 143, 0.52) 58%, rgba(255, 255, 255, 0.72) 100%),
+      url("./assets/security/security-cockpit-campus.png") center / cover no-repeat;
+  }
+}
+
+/* Company panels: stacked sections, no horizontal or inner scrollbars. */
+#company {
+  min-height: auto;
+}
+
+#company .company-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+#company .company-panel {
+  overflow: visible;
+}
+
+#company .drop-slider {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-columns: initial;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  min-height: auto;
+  overflow: visible;
+  padding: 0;
+  scroll-snap-type: none;
+}
+
+#company .company-panel:nth-child(2) .drop-slider {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+#company .drop-card {
+  height: auto;
+  min-height: 300px;
+  overflow: visible;
+  scroll-snap-align: initial;
+}
+
+#company .drop-card .card-head {
+  min-height: auto;
+  padding: 14px 14px 10px;
+  gap: 12px;
+}
+
+#company .story-visual {
+  height: 116px;
+}
+
+#company .story-index {
+  left: 14px;
+  top: 14px;
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+}
+
+#company .story-title b {
+  font-size: 18px;
+}
+
+#company .story-title small {
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+#company .drop-card p {
+  height: auto;
+  overflow: visible;
+  padding: 0 14px 16px;
+  font-size: 14px;
+  line-height: 1.72;
+}
+
+.value-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin: -8px 0 34px;
+}
+
+.value-summary article {
+  min-height: 210px;
+  padding: 28px 32px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(202, 219, 233, 0.92);
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(16, 57, 98, 0.08);
+}
+
+.value-summary span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #116bd8, #0753a4);
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 950;
+}
+
+.value-summary article:nth-child(2) span {
+  background: linear-gradient(135deg, #13a99b, #078e83);
+}
+
+.value-summary ul {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.value-summary li {
+  position: relative;
+  padding-left: 22px;
+  color: #596879;
+  font-size: 17px;
+  line-height: 1.65;
+  font-weight: 700;
+}
+
+.value-summary li::before {
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 8px;
+  height: 8px;
+  content: "";
+  background: #f5a524;
+  border-radius: 50%;
+}
+
+@media (max-width: 1320px) {
+  #company .drop-slider,
+  #company .company-panel:nth-child(2) .drop-slider {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .value-summary {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 820px) {
+  #company .drop-slider,
+  #company .company-panel:nth-child(2) .drop-slider {
+    grid-template-columns: 1fr;
+  }
+
+  .value-summary article {
+    padding: 22px;
+  }
+
+  .value-summary li {
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 520px) {
   .hero-actions {
     flex-direction: column;
@@ -6163,5 +7901,1401 @@ h1 {
 
   .mini-program-panel {
     min-height: 390px;
+  }
+}
+
+/* Presentation-style blue/white visual refresh */
+:root {
+  --ink: #101d2d;
+  --muted: #53647a;
+  --line: #d8e5f1;
+  --blue: #1768d8;
+  --blue-dark: #06438f;
+  --teal: #11aa9b;
+  --bg: #f4f9fd;
+  --shadow: 0 30px 90px rgba(15, 65, 128, 0.14);
+}
+
+body {
+  background:
+    linear-gradient(rgba(23, 104, 216, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 104, 216, 0.055) 1px, transparent 1px),
+    linear-gradient(135deg, #f7fbff 0%, #ffffff 42%, #edf9f7 100%);
+  background-size: 56px 56px, 56px 56px, auto;
+}
+
+.site-header {
+  min-height: 68px;
+  background: rgba(247, 252, 255, 0.88);
+  border-bottom-color: rgba(196, 218, 238, 0.76);
+  box-shadow: 0 12px 40px rgba(14, 61, 114, 0.06);
+}
+
+.brand {
+  letter-spacing: 0;
+}
+
+.brand-mark {
+  border-radius: 3px;
+  background:
+    linear-gradient(135deg, transparent 0 48%, rgba(255, 255, 255, 0.75) 49% 57%, transparent 58%),
+    linear-gradient(135deg, #0a4ea3, #19b6a4);
+}
+
+.nav-links {
+  color: #43546a;
+  font-weight: 700;
+}
+
+.nav-action,
+.primary-button {
+  background: linear-gradient(135deg, #176fe2, #0c55bc);
+  box-shadow: 0 18px 34px rgba(23, 104, 216, 0.25);
+}
+
+.secondary-button {
+  color: #073c80;
+  background: rgba(255, 255, 255, 0.76);
+  border-color: rgba(22, 94, 198, 0.2);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.75);
+}
+
+.hero {
+  grid-template-columns: minmax(520px, 0.9fr) minmax(420px, 0.72fr);
+  gap: 26px;
+  align-items: center;
+  min-height: calc(100vh - 68px);
+  padding: 66px 5.8vw 46px;
+  background:
+    radial-gradient(circle at 82% 42%, rgba(36, 181, 205, 0.24), transparent 31%),
+    radial-gradient(circle at 17% 82%, rgba(23, 104, 216, 0.13), transparent 29%),
+    linear-gradient(135deg, #eff7ff 0%, #ffffff 45%, #e9f8f5 100%);
+}
+
+.hero::before {
+  background-image:
+    linear-gradient(rgba(23, 104, 216, 0.092) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 104, 216, 0.092) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(90deg, #000 0%, #000 74%, transparent 100%);
+}
+
+.hero::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 62vw;
+  height: 72%;
+  content: "";
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 0 56%, rgba(255, 255, 255, 0.82) 82%, #ffffff 100%),
+    radial-gradient(ellipse at 52% 72%, rgba(20, 100, 178, 0.22), transparent 44%);
+}
+
+.hero-copy {
+  max-width: 1040px;
+}
+
+.eyebrow {
+  margin-bottom: 18px;
+  color: #0da99c;
+  font-size: 19px;
+  letter-spacing: 0;
+}
+
+h1 {
+  max-width: 1040px;
+  margin-bottom: 26px;
+  color: #0f1f33;
+  font-size: clamp(56px, 5vw, 86px);
+  line-height: 1.08;
+  letter-spacing: 0;
+  font-weight: 900;
+}
+
+.hero-lede {
+  max-width: 900px;
+  margin-bottom: 34px;
+  color: #40516a;
+  font-size: 22px;
+  font-weight: 650;
+  line-height: 1.75;
+}
+
+.hero-actions {
+  gap: 18px;
+  margin-bottom: 42px;
+}
+
+.primary-button,
+.secondary-button {
+  min-height: 58px;
+  padding: 0 28px;
+  border-radius: 8px;
+  font-size: 19px;
+}
+
+.hero-metrics {
+  max-width: 780px;
+  gap: 18px;
+}
+
+.hero-metrics > a,
+.hero-metrics > div {
+  min-height: 128px;
+  padding: 26px 28px;
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(197, 216, 232, 0.92);
+  box-shadow: 0 18px 44px rgba(36, 76, 117, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.hero-metrics strong {
+  color: #06438f;
+  font-size: 38px;
+  line-height: 1.1;
+}
+
+.hero-metrics span {
+  margin-top: 12px;
+  color: #65748a;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.hero-visual {
+  min-height: min(600px, 62vh);
+}
+
+.cockpit-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.42 / 1;
+  overflow: visible;
+  padding: 0;
+}
+
+.cockpit {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  overflow: visible;
+  color: inherit;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transform: none;
+}
+
+.cockpit > * {
+  display: none;
+}
+
+.cockpit::before {
+  z-index: 1;
+  inset: 5% -12% 8% -4%;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 0 55%, rgba(255, 255, 255, 0.88) 86%, #ffffff 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 20% 78%, rgba(255, 255, 255, 0.48)),
+    url("./assets/security/security-cockpit-campus.png") center / cover no-repeat;
+  border-radius: 0;
+  filter: saturate(0.9) brightness(1.14) contrast(0.96);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 12%, #000 92%, transparent 100%);
+  opacity: 0.95;
+}
+
+.cockpit::after {
+  z-index: 2;
+  right: -2%;
+  bottom: 0;
+  width: 76%;
+  height: 26%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), #ffffff 68%);
+  filter: blur(10px);
+}
+
+.section {
+  position: relative;
+  padding: 92px 5.8vw;
+}
+
+.section::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  background:
+    linear-gradient(rgba(23, 104, 216, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 104, 216, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.section-heading h2 {
+  color: #102033;
+  font-size: clamp(34px, 3vw, 50px);
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.section-heading p:last-child {
+  color: #53647a;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.company-section,
+.architecture,
+.implementation,
+.value-section {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(239, 248, 252, 0.9)),
+    #ffffff;
+}
+
+.company-panel,
+.scene-card,
+.value-grid article,
+.timeline div,
+.layer,
+.capability-columns div,
+.drop-card {
+  border-color: rgba(198, 216, 232, 0.9);
+  box-shadow: 0 22px 58px rgba(17, 63, 112, 0.09);
+  backdrop-filter: blur(8px);
+}
+
+.scene-card,
+.value-grid article,
+.timeline div,
+.capability-columns div {
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.scene-card h3,
+.value-grid h3,
+.timeline h3,
+.capability-columns h3 {
+  color: #102033;
+  font-weight: 900;
+}
+
+.scene-icon {
+  background:
+    linear-gradient(135deg, rgba(23, 104, 216, 0.12), rgba(17, 170, 155, 0.12));
+  border: 1px solid rgba(23, 104, 216, 0.16);
+}
+
+.layer {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(238, 248, 255, 0.72));
+}
+
+.layer-title span {
+  font-size: 25px;
+}
+
+.cta-section {
+  overflow: hidden;
+  background:
+    linear-gradient(100deg, rgba(5, 67, 143, 0.95), rgba(20, 106, 208, 0.9)),
+    url("./assets/command/campus-digital-twin.png") center / cover no-repeat;
+  box-shadow: 0 28px 80px rgba(12, 74, 145, 0.24);
+}
+
+.cta-section::after {
+  position: absolute;
+  inset: auto 0 0;
+  height: 44%;
+  content: "";
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.18));
+  pointer-events: none;
+}
+
+@media (max-width: 1320px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    min-height: 500px;
+  }
+
+  .cockpit-wrap {
+    max-width: 980px;
+    aspect-ratio: 16 / 8.5;
+  }
+}
+
+@media (max-width: 820px) {
+  .hero {
+    padding: 46px 5vw 34px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .hero-lede {
+    font-size: 17px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    min-height: 50px;
+    font-size: 16px;
+  }
+
+  .hero-visual {
+    min-height: 340px;
+  }
+
+  .cockpit-wrap {
+    aspect-ratio: 1.15 / 1;
+  }
+}
+
+@media (max-width: 520px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  .eyebrow {
+    font-size: 16px;
+  }
+
+  .hero-metrics > a,
+  .hero-metrics > div {
+    min-height: 104px;
+  }
+}
+
+/* Refined hero: use the campus image as the homepage background, fading to white. */
+.hero {
+  display: block;
+  min-height: calc(100vh - 68px);
+  padding: 78px 5.8vw 72px;
+  background:
+    linear-gradient(rgba(23, 104, 216, 0.085) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 104, 216, 0.085) 1px, transparent 1px),
+    radial-gradient(circle at 76% 32%, rgba(44, 190, 206, 0.22), transparent 30%),
+    linear-gradient(135deg, rgba(238, 247, 255, 0.96) 0%, rgba(255, 255, 255, 0.88) 48%, rgba(232, 248, 245, 0.8) 100%);
+  background-size: 56px 56px, 56px 56px, auto, auto;
+}
+
+.hero::before {
+  inset: auto 0 0;
+  height: 54%;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 0 45%, rgba(255, 255, 255, 0.84) 79%, #ffffff 100%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.76) 0 6%, rgba(255, 255, 255, 0.08) 24% 76%, rgba(255, 255, 255, 0.82) 100%),
+    url("./assets/security/security-cockpit-campus.png") center 42% / cover no-repeat;
+  mask-image: none;
+  opacity: 0.94;
+}
+
+.hero::after {
+  inset: 0;
+  width: auto;
+  height: auto;
+  background:
+    linear-gradient(180deg, rgba(247, 252, 255, 0.38) 0 34%, rgba(255, 255, 255, 0.08) 58%, #ffffff 100%),
+    linear-gradient(90deg, rgba(247, 252, 255, 0.72) 0 45%, rgba(247, 252, 255, 0.2) 68%, rgba(247, 252, 255, 0.76) 100%);
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 1120px;
+}
+
+.hero .eyebrow {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.hero h1 {
+  max-width: 1080px;
+  margin-bottom: 28px;
+  font-size: clamp(66px, 5.8vw, 96px);
+  line-height: 1.05;
+}
+
+.hero-lede {
+  max-width: 940px;
+  margin-bottom: 36px;
+  font-size: 24px;
+  line-height: 1.72;
+}
+
+.hero-actions {
+  margin-bottom: 58px;
+}
+
+.hero-metrics {
+  max-width: 900px;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.hero-metrics > a,
+.hero-metrics > div {
+  min-height: 142px;
+  padding: 30px 34px;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.hero-metrics strong {
+  font-size: 44px;
+}
+
+.hero-metrics span {
+  font-size: 18px;
+}
+
+.hero-visual {
+  display: none;
+}
+
+@media (max-width: 1320px) {
+  .hero {
+    min-height: calc(100vh - 68px);
+    padding-top: 64px;
+    padding-bottom: 70px;
+  }
+
+  .hero::before {
+    height: 56%;
+  }
+
+  .hero h1 {
+    font-size: clamp(54px, 7vw, 78px);
+  }
+}
+
+@media (max-width: 820px) {
+  .hero {
+    padding: 44px 5vw 42px;
+    min-height: auto;
+  }
+
+  .hero::before {
+    height: 34%;
+    opacity: 0.6;
+  }
+
+  .hero .eyebrow {
+    font-size: 17px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-lede {
+    font-size: 17px;
+  }
+
+  .hero-actions {
+    margin-bottom: 34px;
+  }
+
+  .hero-metrics {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .hero::before {
+    height: 28%;
+  }
+}
+
+/* Full PPT-inspired visual system */
+body {
+  background:
+    radial-gradient(ellipse at 50% 8%, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0) 34%),
+    #d6d6d6;
+}
+
+:root {
+  --ppt-canvas: 1440px;
+  --ppt-side-gap: 72px;
+  --ppt-slide-height: 760px;
+  --ppt-section-pad: 70px;
+}
+
+@media (min-width: 821px) {
+  body {
+    zoom: 0.75;
+  }
+}
+
+.site-header {
+  width: min(var(--ppt-canvas), calc(100% - var(--ppt-side-gap)));
+  margin: 20px auto 0;
+  padding: 0 34px;
+  left: auto;
+  transform: none;
+  border: 0;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.08);
+}
+
+main {
+  padding: 38px 0 72px;
+}
+
+.hero,
+.section,
+.cta-section {
+  width: min(var(--ppt-canvas), calc(100% - var(--ppt-side-gap)));
+  min-height: var(--ppt-slide-height);
+  margin: 0 auto 48px;
+  border-radius: 0;
+  box-shadow: 0 34px 70px rgba(0, 0, 0, 0.22);
+}
+
+.hero {
+  display: block;
+  min-height: var(--ppt-slide-height);
+  padding: 0;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.hero::before {
+  inset: 0 0 auto;
+  height: 68%;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 64%, rgba(255, 255, 255, 0.64) 86%, #ffffff 100%),
+    linear-gradient(90deg, rgba(6, 65, 143, 0.98) 0 43%, rgba(6, 84, 166, 0.76) 54%, rgba(6, 84, 166, 0.08) 100%),
+    url("./assets/security/security-cockpit-campus.png") right 38% center / 78% auto no-repeat,
+    linear-gradient(135deg, #0b4d9f, #0a68bd);
+  opacity: 1;
+}
+
+.hero::after {
+  inset: auto 0 236px;
+  height: 168px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), #ffffff 72%);
+  filter: blur(5px);
+}
+
+.slide-brand {
+  position: absolute;
+  left: 70px;
+  top: 46px;
+  z-index: 3;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  max-width: none;
+  min-height: var(--ppt-slide-height);
+  padding: 122px 70px 38px;
+}
+
+.hero .eyebrow {
+  max-width: 560px;
+  margin-bottom: 28px;
+  color: #eaf6ff;
+  font-size: 18px;
+}
+
+.hero h1 {
+  max-width: 610px;
+  margin-bottom: 26px;
+  color: #ffffff;
+  font-size: 32px;
+  line-height: 1.3;
+  font-weight: 750;
+}
+
+.hero h1 span {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 44px;
+  line-height: 1.08;
+  font-weight: 900;
+}
+
+.hero-lede {
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.9;
+}
+
+.hero-actions {
+  position: absolute;
+  left: 70px;
+  bottom: 150px;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  margin: 0;
+}
+
+.primary-button,
+.secondary-button {
+  min-height: 42px;
+  padding: 0 28px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.secondary-button {
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.hero-metrics {
+  position: absolute;
+  left: 70px;
+  right: 70px;
+  bottom: 42px;
+  max-width: none;
+  display: grid;
+  grid-template-columns: 1.15fr 0.9fr 0.9fr 1.4fr;
+  align-items: end;
+  gap: 0;
+  padding-top: 18px;
+  border-top: 2px solid #222;
+}
+
+.hero-metrics::before {
+  content: "High - Quality Promotes Development\A 优化运营";
+  white-space: pre-line;
+  color: #1e2530;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.hero-metrics > a,
+.hero-metrics > div {
+  min-height: auto;
+  padding: 0 22px;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.hero-metrics strong {
+  display: inline;
+  color: #111821;
+  font-size: 18px;
+  font-weight: 950;
+}
+
+.hero-metrics span {
+  display: inline;
+  margin: 0 0 0 7px;
+  color: #185f9d;
+  font-size: 17px;
+  font-weight: 850;
+}
+
+.hero-metrics::after {
+  justify-self: end;
+  content: "AI smart campus";
+  color: #1b2028;
+  font-size: 24px;
+  font-weight: 950;
+}
+
+.section {
+  z-index: 0;
+  overflow: hidden;
+  padding: var(--ppt-section-pad);
+  background: #ffffff;
+}
+
+.section::before {
+  inset: auto -8% -18%;
+  z-index: -1;
+  height: 58%;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 0 30%, #ffffff 92%),
+    linear-gradient(90deg, rgba(7, 88, 178, 0.08), rgba(7, 88, 178, 0) 34% 66%, rgba(7, 88, 178, 0.08));
+  border-radius: 50% 50% 0 0;
+}
+
+.section::after,
+.cta-section::after {
+  position: absolute;
+  top: 44px;
+  right: 70px;
+  z-index: 1;
+  content: "云极洲 PPT Design";
+  color: rgba(18, 32, 49, 0.48);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.section-heading {
+  max-width: 1080px;
+  margin-bottom: 42px;
+}
+
+.section-heading .eyebrow {
+  color: #6d737d;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.section-heading h2 {
+  max-width: 1000px;
+  margin-bottom: 16px;
+  color: #20242b;
+  font-size: 30px;
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+.section-heading h2::before {
+  display: block;
+  margin-bottom: 8px;
+  content: attr(data-en);
+  color: #111821;
+  font-size: 38px;
+  line-height: 1.15;
+  font-weight: 950;
+}
+
+.section-heading p:last-child,
+.company-copy,
+.scene-card p,
+.value-grid p,
+.timeline p {
+  color: #596574;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.company-section {
+  min-height: 820px;
+  background:
+    linear-gradient(90deg, #ffffff 0 32%, rgba(237, 244, 250, 0.88) 32% 100%);
+}
+
+.company-intro {
+  grid-template-columns: 0.9fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.company-columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.company-panel {
+  padding: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border: 0;
+  box-shadow: none;
+}
+
+.panel-title {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.panel-title span {
+  padding: 6px 22px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #0753a4, #1176d6);
+  border-radius: 999px;
+  font-weight: 850;
+}
+
+.panel-title strong {
+  color: #1b2028;
+  font-size: 22px;
+}
+
+.browse-hint {
+  display: none;
+}
+
+.drop-slider {
+  grid-auto-columns: minmax(270px, 48%);
+  min-height: 360px;
+}
+
+.drop-card {
+  height: 348px;
+  min-height: 348px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(206, 218, 229, 0.85);
+  box-shadow: 0 16px 34px rgba(19, 45, 80, 0.08);
+}
+
+.story-visual {
+  height: 132px;
+  border-radius: 0;
+  background:
+    linear-gradient(90deg, rgba(9, 80, 157, 0.78), rgba(9, 80, 157, 0.12)),
+    url("./assets/business/collaboration-operations.png") center / cover no-repeat;
+}
+
+.story-title b {
+  font-size: 19px;
+  font-weight: 950;
+}
+
+.scene-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.scene-card {
+  position: relative;
+  min-height: 420px;
+  padding: 180px 30px 30px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 0;
+  border-bottom: 8px solid #0753a4;
+  box-shadow: 0 18px 42px rgba(13, 63, 124, 0.18);
+}
+
+.scene-card::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 148px;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(6, 75, 153, 0.92), rgba(6, 75, 153, 0.18)),
+    url("./assets/command/campus-digital-twin.png") center / cover no-repeat;
+}
+
+.scene-card:nth-child(2)::before,
+.scene-card:nth-child(5)::before {
+  background:
+    linear-gradient(90deg, rgba(6, 75, 153, 0.92), rgba(6, 75, 153, 0.18)),
+    url("./assets/security/inspection-scenes-sheet.png") center / cover no-repeat;
+}
+
+.scene-card:nth-child(3)::before,
+.scene-card:nth-child(6)::before {
+  background:
+    linear-gradient(90deg, rgba(6, 75, 153, 0.92), rgba(6, 75, 153, 0.18)),
+    url("./assets/security/warning-scenes-sheet.png") center / cover no-repeat;
+}
+
+.scene-card::after {
+  position: absolute;
+  top: 92px;
+  left: 30px;
+  content: attr(data-en);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.scene-icon {
+  position: absolute;
+  top: 116px;
+  left: 30px;
+  z-index: 1;
+  width: 54px;
+  height: 54px;
+  margin: 0;
+  background: #0868c9;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 12px 24px rgba(4, 68, 143, 0.28);
+}
+
+.scene-card h3 {
+  margin: 0 0 18px;
+  font-size: 36px;
+  font-weight: 950;
+  line-height: 1.16;
+}
+
+.scene-card p::before {
+  display: block;
+  width: 72px;
+  height: 2px;
+  margin: 0 0 18px;
+  content: "";
+  background: #0753a4;
+}
+
+.architecture {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(7, 83, 164, 0.08), transparent 28%),
+    #ffffff;
+}
+
+.architecture .section-heading {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.layer-stack {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 42px;
+  max-width: 1120px;
+  margin: 34px auto 0;
+}
+
+.layer-stack::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 210px;
+  height: 210px;
+  z-index: 0;
+  display: grid;
+  place-items: center;
+  content: "提质增效";
+  color: #111821;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 50%;
+  box-shadow: 0 20px 42px rgba(26, 61, 99, 0.13);
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  font-weight: 950;
+}
+
+.layer {
+  position: relative;
+  z-index: 1;
+  min-height: 190px;
+  padding: 24px;
+  border: 0;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: none;
+}
+
+.layer-title {
+  justify-content: flex-start;
+  border: 0;
+}
+
+.layer-title span {
+  color: #111821;
+  font-size: 23px;
+}
+
+.layer-title strong {
+  color: #667382;
+}
+
+.layer-title::before {
+  width: 54px;
+  height: 54px;
+  flex: 0 0 auto;
+  content: "";
+  background: #0753a4;
+  border-radius: 50%;
+  box-shadow: 0 10px 22px rgba(7, 83, 164, 0.25);
+}
+
+.capability-columns {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.capability-columns div,
+.tag-row span,
+.device-strip span {
+  background: rgba(236, 243, 250, 0.82);
+  border: 0;
+}
+
+.value-section {
+  background:
+    linear-gradient(180deg, #ffffff 0 38%, #edf3f8 38% 100%);
+}
+
+.value-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.value-grid article {
+  min-height: 430px;
+  padding: 178px 28px 28px;
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: none;
+}
+
+.value-grid article::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 146px;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(6, 75, 153, 0.88), rgba(6, 75, 153, 0.08)),
+    url("./assets/business/collaboration-operations.png") center / cover no-repeat;
+}
+
+.value-grid span {
+  position: absolute;
+  left: 28px;
+  top: 110px;
+  width: auto;
+  height: auto;
+  color: #ffffff;
+  background: transparent;
+  border-radius: 0;
+  font-size: 48px;
+  font-weight: 950;
+}
+
+.value-grid h3 {
+  font-size: 34px;
+  font-weight: 950;
+}
+
+.implementation {
+  background: #ffffff;
+}
+
+.timeline {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.timeline div {
+  min-height: 430px;
+  padding: 48px 26px 30px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.94)),
+    url("./assets/security/command-scenes-sheet.png") center / cover no-repeat;
+  border: 0;
+  box-shadow: none;
+}
+
+.timeline div:nth-child(1) {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.94)),
+    url("./assets/command/campus-digital-twin.png") center / cover no-repeat;
+}
+
+.timeline div:nth-child(2) {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.94)),
+    url("./assets/security/security-cockpit-campus.png") center / cover no-repeat;
+}
+
+.timeline div:nth-child(3) {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.94)),
+    url("./assets/business/collaboration-operations.png") center / cover no-repeat;
+}
+
+.timeline div:nth-child(4) {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.94)),
+    url("./assets/command/assurance-night-patrol.png") center / cover no-repeat;
+}
+
+.timeline span {
+  width: 64px;
+  height: 64px;
+  color: #ffffff;
+  background: #0753a4;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+.timeline h3 {
+  margin-top: 26px;
+  font-size: 28px;
+  font-weight: 950;
+}
+
+.cta-section {
+  position: relative;
+  min-height: 480px;
+  padding: 90px 70px;
+  background:
+    linear-gradient(90deg, rgba(5, 69, 151, 0.96) 0 42%, rgba(5, 69, 151, 0.68) 62%, rgba(5, 69, 151, 0.12) 100%),
+    url("./assets/command/campus-digital-twin.png") right center / cover no-repeat;
+}
+
+.cta-section h2 {
+  max-width: 650px;
+  color: #ffffff;
+  font-size: 46px;
+  line-height: 1.16;
+  font-weight: 950;
+}
+
+.cta-section p {
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+@media (max-width: 1320px) {
+  .site-header,
+  .hero,
+  .section,
+  .cta-section {
+    width: min(var(--ppt-canvas), calc(100% - 44px));
+  }
+
+  .hero-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .hero-metrics::before,
+  .hero-metrics::after {
+    display: none;
+  }
+
+  .scene-grid,
+  .value-grid,
+  .timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .site-header {
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    transform: none;
+  }
+
+  main {
+    padding: 22px 0 48px;
+  }
+
+  .hero,
+  .section,
+  .cta-section {
+    width: calc(100% - 24px);
+    min-height: auto;
+    margin-bottom: 24px;
+  }
+
+  .hero::before {
+    height: 100%;
+    background:
+      linear-gradient(180deg, rgba(7, 68, 143, 0.9), rgba(7, 68, 143, 0.68)),
+      url("./assets/security/security-cockpit-campus.png") center / cover no-repeat;
+  }
+
+  .hero::after {
+    display: none;
+  }
+
+  .hero-copy {
+    min-height: auto;
+    padding: 96px 28px 34px;
+  }
+
+  .slide-brand {
+    left: 28px;
+    top: 36px;
+  }
+
+  .hero h1,
+  .hero h1 span {
+    font-size: 34px;
+  }
+
+  .hero-actions,
+  .hero-metrics {
+    position: static;
+    margin-top: 28px;
+  }
+
+  .hero-metrics {
+    grid-template-columns: 1fr;
+    border-top-color: rgba(255, 255, 255, 0.44);
+  }
+
+  .hero-metrics > a {
+    padding: 12px 0;
+  }
+
+  .hero-metrics strong,
+  .hero-metrics span {
+    color: #ffffff;
+  }
+
+  .section,
+  .cta-section {
+    padding: 42px 26px;
+  }
+
+  .section-heading h2::before {
+    font-size: 30px;
+  }
+
+  .scene-grid,
+  .value-grid,
+  .timeline,
+  .layer-stack,
+  .company-intro,
+  .company-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .layer-stack::before {
+    display: none;
+  }
+}
+
+/* Final architecture override: force vertical hierarchy after all layout rules. */
+#architecture .layer-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: none;
+  margin: 32px 0 0;
+}
+
+#architecture .layer-stack::before {
+  display: none;
+}
+
+#architecture .layer {
+  min-height: auto;
+  padding: 22px 28px;
+  border-top: 0;
+  border-left: 8px solid #0753a4;
+  background:
+    linear-gradient(90deg, rgba(7, 83, 164, 0.08), rgba(255, 255, 255, 0.96) 34%),
+    rgba(255, 255, 255, 0.94);
+  box-shadow: 0 12px 28px rgba(13, 63, 124, 0.08);
+}
+
+#architecture .layer-data {
+  border-left-color: #0b75c9;
+}
+
+#architecture .layer-base {
+  border-left-color: #2492c6;
+}
+
+#architecture .layer-access {
+  border-left-color: #13a99b;
+}
+
+#architecture .layer-title {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 0.75fr) minmax(220px, 1fr);
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(196, 214, 230, 0.86);
+}
+
+#architecture .layer-title::before {
+  grid-row: 1;
+}
+
+#architecture .layer-title span {
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+#architecture .layer-title strong {
+  justify-self: end;
+  color: #0753a4;
+  font-size: 16px;
+}
+
+#architecture .capability-columns {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+#architecture .capability-columns div {
+  padding: 16px;
+}
+
+#architecture .capability-columns h3 {
+  font-size: 17px;
+}
+
+#architecture .capability-columns li,
+#architecture .tag-row span,
+#architecture .device-strip span {
+  min-height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+@media (max-width: 820px) {
+  #architecture .layer-title {
+    grid-template-columns: 46px 1fr;
+  }
+
+  #architecture .layer-title strong {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  #architecture .capability-columns {
+    grid-template-columns: 1fr;
+  }
+}
+/* Absolute final hero treatment: keep image full-bleed and copy readable. */
+.hero::before {
+  height: 76%;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 0 48%, rgba(230, 238, 249, 0.12) 60%, rgba(255, 255, 255, 0.46) 78%, #ffffff 100%),
+    linear-gradient(90deg, rgba(5, 62, 140, 0.98) 0%, rgba(5, 72, 150, 0.78) 36%, rgba(5, 72, 150, 0.38) 68%, rgba(5, 72, 150, 0.14) 100%),
+    url("./assets/security/security-cockpit-campus.png") center center / cover no-repeat,
+    linear-gradient(135deg, #0b4d9f, #0a68bd);
+}
+
+.hero::after {
+  inset: auto 0 176px;
+  height: 320px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(235, 241, 250, 0.1) 22%, rgba(255, 255, 255, 0.42) 56%, rgba(255, 255, 255, 0.86) 82%, #ffffff 100%);
+  filter: blur(14px);
+}
+
+.hero-lede {
+  position: relative;
+  z-index: 5;
+  color: rgba(255, 255, 255, 0.96);
+  text-shadow: 0 2px 10px rgba(0, 28, 74, 0.54), 0 0 18px rgba(0, 28, 74, 0.28);
+}
+
+@media (max-width: 820px) {
+  .hero::before {
+    height: 100%;
+    background:
+      linear-gradient(180deg, rgba(7, 68, 143, 0.88), rgba(7, 68, 143, 0.52) 58%, rgba(255, 255, 255, 0.72) 100%),
+      url("./assets/security/security-cockpit-campus.png") center / cover no-repeat;
   }
 }
